@@ -22,17 +22,15 @@ def search_papers(query_params):
     search_response = requests.get(url_bulk, headers=headers, params=query_params)
     return search_response.json()
 
-paper_count = 0
-def fetch_all_results(query_params, amount,field ):
+
+def fetch_all_results(query_params, amount ):
     all_results = []
     while True:
         if(len(all_results) >= amount):
             break
         response = search_papers(query_params)
-        if(response['data']['title'].find(field) != -1):
-            #add id and title pairs to the list
-            all_results.append({'paperId': result['data']['paperId'], 'title': result['data']['title']})
-        # all_results.extend(response['data'])
+        
+        all_results.extend(response['data'])
         if 'token' not in response:
             break
         query_params['token'] = response['token']
@@ -41,21 +39,28 @@ def fetch_all_results(query_params, amount,field ):
     return all_results
 
 def fetch_papers_on_field(query_params, amount = 10000 ,field = 'Machine Learning'):
-    all_results_on_field = fetch_all_results(query_params, 2000, field)
+    all_results_on_field = fetch_all_results(query_params, amount)
+    matched_papers = []
+    for result in all_results_on_field:
+        if(result['title'].find(field) != -1):
+            #append paperId and title to matched_papers
+            matched_papers.append({'paperId': result['paperId'], 'title': result['title']})
+    return matched_papers
 
-all_result = fetch_all_results(query_params,2000)
-print(len(all_result))
+field = 'Machine Learning'
+all_result = fetch_papers_on_field(query_params, 5000, field)
+matched_paper_count = len(all_result)
+print("Matched paper count: ", matched_paper_count)
 
-ml_paper_count = 0
-for result in all_result:
-    if(result['title'].find('Machine Learning') != -1):
-        ml_paper_count += 1
-
-print("ML related papers count: ", ml_paper_count)
-
-#print paper ids and titles
 print("Paper Id  |  Title")
 for result in all_result:
     print(result['paperId'], " | ", result['title'])
-    print("\n")
 
+#save the results to a json file
+import json
+
+
+filename = f"matched_papers_on_field_{field}.json"
+# Write the data to the JSON file
+with open(filename, 'w') as json_file:
+    json.dump(all_result, json_file, indent=2)
