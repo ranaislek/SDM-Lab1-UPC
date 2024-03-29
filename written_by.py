@@ -56,6 +56,6 @@ import csv
 import pandas as pd
 df = pd.DataFrame(author_details)
 print(df.head())
-# #df.to_csv('papers_details.csv', index=False)
-# print("done")
+df.to_csv('written_by.csv', index=False)
+print("done")
 
