@@ -67,6 +67,6 @@ import csv
 import pandas as pd
 df = pd.DataFrame(paper_details)
 print(df.head())
-#df.to_csv('papers_details.csv', index=False)
+df.to_csv('papers_details.csv', index=False)
 print("done")
 
