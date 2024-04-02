@@ -3,9 +3,11 @@ import json
 import requests
 
 
-#read the written_by.csv to a dataframe
+#read the csv residing in the data folder
 
-df = pd.read_csv('written_by.csv')
+path = "/home/furkanbk/SDM/P1/SDM-P1-GRAPH/data" # change the absolute path of data to your own path
+
+df = pd.read_csv(path + '/written_by.csv')
 
 author_ids = df['authorId'].unique()
 
@@ -69,4 +71,4 @@ for author_id in author_ids:
 import csv
 
 df = pd.DataFrame(author_details)
-df.to_csv('authors.csv', index=False)
+#df.to_csv('authors.csv', index=False)

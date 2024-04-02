@@ -3,7 +3,8 @@ import requests
 import time
 #read json file
 raw_paper_data = None
-with open('matched_papers_on_field_Machine Learning.json', 'r') as json_file:
+path = "/home/furkanbk/SDM/P1/SDM-P1-GRAPH/data" # change the absolute path of data to your own path
+with open(path + '/matched_papers_on_field_Machine Learning.json', 'r') as json_file:
     raw_paper_data = json.load(json_file)
 
 #extract paperId from raw_paper_data
