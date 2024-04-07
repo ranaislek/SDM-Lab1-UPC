@@ -39,7 +39,8 @@ def get_paper_data(paper_id):
     # print(email)
 
     #paper_data_query_params = {'fields': 'title,abstract,year,authors.authorId,embedding.specter_v2,venue,publicationVenue, journal'}
-    paper_data_query_params = {'fields': 'title,abstract,year,embedding.specter_v2'}
+    #paper_data_query_params = {'fields': 'title,abstract,year,embedding.specter_v2'}
+    paper_data_query_params = {'fields': 'externalIds'}
     
     
     #Send the API request and store the response in a variable
@@ -68,6 +69,6 @@ import csv
 import pandas as pd
 df = pd.DataFrame(paper_details)
 print(df.head())
-df.to_csv('papers_details.csv', index=False)
+# df.to_csv('papers_details.csv', index=False)
 print("done")
 
