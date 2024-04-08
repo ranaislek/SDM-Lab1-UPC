@@ -4,6 +4,7 @@ import time
 #read json file
 path = "/home/furkanbk/SDM/P1/SDM-P1-GRAPH/data" # change the absolute path of data to your own path
 raw_paper_data = None
+start_time = time.time()
 with open(path + '/matched_papers_on_field_Machine Learning.json', 'r') as json_file:
     raw_paper_data = json.load(json_file)
 
@@ -47,6 +48,9 @@ import csv
 import pandas as pd
 df = pd.DataFrame(reference_details)
 print(df.head(15))
-#df.to_csv('papers_details.csv', index=False)
-print("done")
+
+path = "/home/furkanbk/SDM/P1/SDM-P1-GRAPH/data" # change the absolute path of data to your own path
+df.to_csv(path + '/citations.csv', index=False)
+
+print("Completed in: ", time.time()-start_time, " seconds")
 

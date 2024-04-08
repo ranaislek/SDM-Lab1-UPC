@@ -240,12 +240,6 @@ with GraphDatabase.driver(URI, auth=AUTH) as driver:
 
 
 
-# # Create authors, papers, and relationships
-# with driver.session() as session:
-#     session.write_transaction(create_conferences, df)
-#     #session.write_transaction(create_papers, df[['paperId', 'title']])
-#     # session.write_transaction(delete_node)
-#     # session.write_transaction(create_relationships, df[['author_id', 'paper_id']])
-#     pass
+
 # # Close Neo4j driver
 driver.close()

@@ -50,6 +50,7 @@ def get_author_details(author_id):
         response = response.json()
         if(response['affiliations'] == []):
             #choose one random university from the mock_universities list
+            
             response['affiliations'] = mock_universities[author_id % len(mock_universities)]
             #response['affiliations'] = "None"
         elif(len(response['affiliations']) > 1):
