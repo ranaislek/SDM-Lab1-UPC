@@ -30,54 +30,59 @@ def search_papers(query_params):
 
 
 def fetch_all_results_on_topic(query_params,amount = 1000):
-    all_results = []
+   
    
 
     #create query parameters for each subject in each fields
  
-    field = 'Machine Learning'
-    papers_in_field = 0
-    while True:
-        
+    fields = ['Machine Learning', 'Game Development', 'Database Management']
+    all_results = []
+    for field in fields:
 
-        if (papers_in_field >= amount):
-            filename = f"matched_papers_{field}.json"
-            # Write the data to the JSON file
-            #path is in bdm_data folder
-            path = "/home/furkanbk/SDM/P1/data"
-            with open(f"{path}/{filename}", 'w') as json_file:
-                json.dump(all_results, json_file, indent=2)
-            all_results = []
-            break
-        response = search_papers(query_params)
-        if 'data' not in response:
-            break
-        for result in response['data']:
-        
-            if(result['title'].find(field) != -1):            
-                papers_in_field += 1
-                if(papers_in_field >= amount):
-                    break
-                all_results.append({'paperId': result['paperId'], 'title': result['title']})
-        # all_results.extend(response['data'])
-        if 'token' not in response:
-            break
-        query_params['token'] = response['token']
-        #latency of 0.5 seconds
-        #time.sleep(0.5)
-    print(f"Matched paper count for {field}: {papers_in_field}")
-    #remove token
-    query_params.pop('token', None)
+        papers_in_field = 0
+        while True:
+            
+
+            if (papers_in_field >= amount):
+                filename = f"matched_papers_{field}.json"
+                # Write the data to the JSON file
+                #path is in bdm_data folder
+                path = "/home/furkanbk/SDM/P1/data"
+                with open(f"{path}/{filename}", 'w') as json_file:
+                    json.dump(all_results, json_file, indent=2)
+                all_results = []
+                break
+            response = search_papers(query_params)
+            if 'data' not in response:
+                break
+            for result in response['data']:
+            
+                if(result['title'].find(field) != -1):            
+                    papers_in_field += 1
+                    if(papers_in_field >= amount):
+                        break
+                    all_results.append({'paperId': result['paperId'], 'title': result['title']})
+            # all_results.extend(response['data'])
+            if 'token' not in response:
+                break
+            query_params['token'] = response['token']
+            #latency of 0.5 seconds
+            #time.sleep(0.5)
+        print(f"Matched paper count for {field}: {papers_in_field}")
+        #remove token
+        query_params.pop('token', None)
     return all_results
 
 
 all_result = fetch_all_results_on_topic(query_params, 100)
-# matched_paper_count = len(all_result)
-# print("Matched paper count: ", matched_paper_count)
 
-# print("Paper Id  |  Title")
-# for result in all_result:
-#     print(result['paperId'], " | ", result['title'])
+#export the results to a json file
+path = "/home/furkanbk/SDM/P1/data"
+filename = "matched_papers.json"
+# Write the data to the JSON file
+with open(f"{path}/{filename}", 'w') as json_file:
+        json.dump(all_result, json_file, indent=2)
+
 
 
 
