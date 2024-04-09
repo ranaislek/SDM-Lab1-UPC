@@ -30,7 +30,7 @@ def create_conferences(tx, conferences):
     query = """
     UNWIND $conferences AS conference
     MERGE (c: Conference {ss_venue_id: conference.ss_venue_id})
-    SET c.name = conference.name, c.url = conference.url
+    SET c.name = conference.name, c.url = conference.url, c.city = conference.city, c.year = toInteger(conference.year), c.edition = toInteger(conference.edition)
     RETURN count(c) AS createdConferences
     """
     result = tx.run(query, conferences=conferences)
@@ -53,7 +53,7 @@ def create_journals(tx, journals):
     query = """
     UNWIND $journals AS journal
     MERGE (j: Journal {ss_venue_id: journal.ss_venue_id})
-    SET j.name = journal.name, j.url = journal.url, j.issn = journal.issn
+    SET j.name = journal.name, j.url = journal.url, j.issn = journal.issn, j.year = toInteger(journal.year), j.volume = toInteger(journal.volume)
     RETURN count(j) AS createdJournals
     """
     result = tx.run(query, journals=journals)
@@ -219,16 +219,16 @@ with GraphDatabase.driver(URI, auth=AUTH) as driver:
                         df= pd.read_csv(os.path.join(path, "authors.csv"))
                         create_authors(tx, df.to_dict('records'))
 
-                        df= pd.read_csv(os.path.join(path, "conferences.csv"))
+                        df= pd.read_csv(os.path.join(path, "conferences_enriched.csv"))
                         create_conferences(tx, df.to_dict('records'))
 
-                        df= pd.read_csv(os.path.join(path, "journals.csv"))
+                        df= pd.read_csv(os.path.join(path, "journals_enriched.csv"))
                         create_journals(tx, df.to_dict('records'))
 
                         df= pd.read_csv(os.path.join(path, "written_by.csv"))
                         create_written_by(tx, df.to_dict('records'))
 
-                        df= pd.read_csv(os.path.join(path, "published_in.csv"))
+                        df= pd.read_csv(os.path.join(path, "published_in_enriched.csv"))
                         create_published_in(tx, df.to_dict('records'))
 
                         df= pd.read_csv(os.path.join(path, "affiliations.csv"))
