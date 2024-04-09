@@ -4,4 +4,50 @@ ss_venue_id,name,url
 1ec5a55c-414e-4f79-b7dc-48e1dba3618e,IEEE Region 10 Conference,
 3dbf084c-ef47-4b74-9919-047b40704538,Italian National Conference on Sensors,http://www.e-helvetica.nb.admin.ch/directAccess?callnumber=bel-142001
 ff0c44b6-e816-47b6-b897-42bf5d79d5c5,International Conference on Data Stream Mining & Processing,
-0b3ee9d9-f675-4051-87b1-08bf4319e8aa,International Conference on Software and Computer Applications,
+8793834a-83cf-4194-9973-b8a7b3681191,Workshop on Internet and Network Economics,http://www.wikicfp.com/cfp/program?id=3079
+83f99940-7a4f-4d34-8ae2-3cd8384f1f18,Artificial General Intelligence,http://www.wikicfp.com/cfp/program?id=83
+47e0888a-1a02-4c10-896a-464d8d7572a4,"International Conference on Computing, Networking and Communications",
+cf81dfa4-e4a6-4e46-a4ef-ea7820cf1fe7,Artificial Intelligence and Interactive Digital Entertainment Conference,http://www.aiide.org/
+67f7f831-711a-43c8-8785-1e09005359b5,International Joint Conference on Artificial Intelligence,http://www.ijcai.org/
+902dafc1-75fb-4cd2-b106-3653b42c1626,Digra,http://www.digra.org/digital-library/
+8c75e6eb-e194-4c70-922f-623ee68bb497,International Conference on Advanced Infocomm Technology,
+0361796c-e4f2-44da-b93a-c12ecfd71964,International Conference on Quantitative Evaluation of Systems,http://www.qest.org/
+0bc06423-e2de-42e2-a1a4-65b119c81657,Cyber Security and Information Intelligence Research Workshop,
+ce5f5d49-2807-4aa0-9db3-64a03084444d,Conference on Computability in Europe,http://www.illc.uva.nl/CiE/
+7654260e-79f9-45c5-9663-d72027cf88f3,IEEE International Conference on Computer Vision,https://ieeexplore.ieee.org/xpl/conhome/1000149/all-proceedings
+baf1e6ba-de99-44c0-a528-e159d2de10e6,International Conference on Applied Human Factors and Ergonomics,https://2022.ahfe.org/
+bdc2e585-4e48-4e36-8af1-6d859763d405,AAAI Conference on Artificial Intelligence,http://www.aaai.org/
+8341fde2-3e67-4fde-bb5c-6f0320d7f114,International Symposium on Mathematical Foundations of Computer Science,https://en.wikipedia.org/wiki/International_Symposium_on_Mathematical_Foundations_of_Computer_Science
+7474c4a0-75d9-4105-9809-8e7d5201c5e1,International Conference on Language Resources and Evaluation,http://www.lrec-conf.org/
+d9720b90-d60b-48bc-9df8-87a30b9a60dd,Neural Information Processing Systems,http://neurips.cc/
+bce97c16-ce21-4e56-ab0e-0060085c0d85,International Conference on Computational Intelligence and Security,http://www.wikicfp.com/cfp/program?id=470
+b55b50b1-aae7-47a7-b042-8aecc930073d,International Conference on Human Factors in Computing Systems,http://www.acm.org/sigchi/
+24d0f36f-58ab-4957-adaa-50ca6e4a969e,Brazilian Symposium on Software Engineering,
+094179ed-a6fe-4919-8be3-c9d48ff5e1f8,ACM SIGCHI Annual Symposium on Computer-Human Interaction in Play,
+64efda39-fbce-4563-9435-4064cc930715,European Conference on Technology Enhanced Learning,http://www.wikicfp.com/cfp/program?id=826
+6514cc81-db1c-4551-bb94-8f80cb99e085,International Conference on Intelligent Tutoring Systems,https://link.springer.com/conference/its
+3e64b1c1-745f-4edf-bd92-b8ef122bb49c,International Conference on Artificial Neural Networks,http://www.e-nns.org/
+ef00f0de-a7e5-443a-9a2d-c78502a4b598,Conference on Computer Science and Information Systems,https://fedcsis.org/
+7180f721-a356-48cc-b6cd-dd3ab90a3566,International Conference on Advanced Information Networking and Applications,http://www.aina-conference.org/
+60c45ccc-5528-42eb-85a9-7606a3d9b220,International Conference on Interaction Sciences,https://web.archive.org/web/*/http://www.aicit.org/icis/
+a210e09f-0ea1-4863-bc9c-75ddc51197ac,Communication Systems and Applications,http://www.wikicfp.com/cfp/program?id=587
+528ced1f-e949-4e1a-8fee-2ffbf0be551d,Conference on Innovative Data Systems Research,http://cidrdb.org/
+838ca88f-3961-404a-ad64-3a2f95c65615,International Conference on Information Systems Security and Privacy,
+5dfdcc5e-f28b-42bd-9832-bf3894169b1c,International Conference on Information Control Systems & Technologies,http://www.wikicfp.com/cfp/program?id=1483
+8107ca1c-f651-4769-86dc-3d94a7b5ac26,International Conference on Database Systems for Advanced Applications,http://www.dasfaa.org/
+ffe5bb5c-04ed-488e-985d-d3a7b39542cf,IEEE International Conference on Distributed Computing Systems,https://ieeexplore.ieee.org/xpl/conhome/1000213/all-proceedings
+764e3630-ddac-4c21-af4b-9d32ffef082e,IEEE International Conference on Data Engineering,http://www.wikicfp.com/cfp/program?id=1331
+234ccdc0-f58f-4f94-b86a-428d11a0c5ad,International Symposium on Information Theory,http://www.wikicfp.com/cfp/program?id=1719
+b49868ed-865c-4154-b70a-8d34e341cf68,IEEE/ACM International Conference on Human-Robot Interaction,http://www.wikicfp.com/cfp/program?id=1232
+f4989ee4-e1d2-45b4-85ad-c43a8ffef177,ACM SIGACT-SIGMOD-SIGART Symposium on Principles of Database Systems,http://www.acm.org/sigmod/pods/index.html
+35628da0-1de4-4d4c-b510-8ebb18788068,Berliner XML Tage,http://www.berliner-xmltage.de/
+29deb9df-6626-419d-9aaf-1d46440013e1,International Conference on Database and Expert Systems Applications,http://www.dexa.org/
+6190896d-fefe-4852-946c-33759039973a,"International Multi-Conference on Systems, Signals & Devices",
+7474c4a0-75d9-4105-9809-8e7d5201c5e1,International Conference on Language Resources and Evaluation,http://www.lrec-conf.org/
+f3f5580f-aba5-410b-921c-971d6f31b7b1,Traffic Monitoring and Analysis,
+7474c4a0-75d9-4105-9809-8e7d5201c5e1,International Conference on Language Resources and Evaluation,http://www.lrec-conf.org/
+bea6dbb8-4367-4c35-8e28-e749f3ad107c,International Conference on Database Theory,http://alpha.luc.ac.be/~lucp1080/icdt/
+23b8d7ac-6e6f-4fe1-9f7e-dc7042815a44,Symposium on Advances in Databases and Information Systems,http://www.ipi.ac.ru/sigmod/
+6a220f63-ac7e-432d-a176-678d9d5756b8,Brazilian Symposium on Bioinformatics,http://www.wikicfp.com/cfp/program?id=327
+03a391b7-8aea-4307-b32b-2add7e3683b6,British National Conference on Databases,
+a5c58053-0673-4cdb-b2b8-b6b0ad6911d1,Very Large Data Bases Conference,https://www.vldb.org/conference.html

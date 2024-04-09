@@ -72,4 +72,5 @@ for author_id in author_ids:
 import csv
 
 df = pd.DataFrame(author_details)
+df.to_csv(path + '/authors.csv', index=False)
 #df.to_csv('authors.csv', index=False)

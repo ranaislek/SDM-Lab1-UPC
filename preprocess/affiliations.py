@@ -44,7 +44,22 @@ for affiliation in unique_affiliations:
         "website": website
     })
 
+    # create a affiliated_with relationship between authors and affiliations
+
+
 df = pd.DataFrame(affiliations)
 df.to_csv(path + '/affiliations.csv', index=False)
+
+affiliated_with = []
+for index, row in authors.iterrows():
+    author_id = row['authorId']
+    affiliation = row['affiliations']
+    affiliated_with.append({
+        "authorId": author_id,
+        "affiliation": affiliation
+    })
+
+df = pd.DataFrame(affiliated_with)
+df.to_csv(path + '/affiliated_with.csv', index=False)
     
 

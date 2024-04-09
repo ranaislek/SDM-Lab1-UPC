@@ -19,7 +19,7 @@ def create_authors(tx, authors):
     query = """
     UNWIND $authors AS author
     MERGE (a:Author {author_id: author.authorId})
-    SET a.name = author.name, a.affiliations = author.affiliations, a.email = author.email
+    SET a.name = author.name, a.email = author.email
     RETURN count(a) AS createdAuthors
     """
     result = tx.run(query, authors=authors)
@@ -41,7 +41,8 @@ def create_papers(tx, papers):
     query = """
     UNWIND $papers AS paper
     MERGE (p: Paper {paper_id: paper.paperId})
-    SET p.title = paper.title, p.abstract = paper.abstract, p.MA_email = paper.MA_email, p.year = paper.MA_name,  p.year = toInteger(paper.year), p.embedding = paper.embedding
+    SET p.title = paper.title, p.abstract = paper.abstract, p.MA_email = paper.MA_email, p.year = paper.MA_name,  p.year = toInteger(paper.year), p.embedding = paper.embedding,
+    p.keywords = paper.keywords, p.doi = paper.doi
     RETURN count(p) AS createdPapers
     """
     result = tx.run(query, papers=papers)
@@ -91,6 +92,63 @@ def create_published_in(tx, relationships):
     created_relationships = result.single()["createdRelationships"]
     print(f"{created_relationships} PUBLISHED_IN relationships created successfully")
 
+
+def create_affiliated_with(tx, relationships):
+    query = """
+    UNWIND $relationships AS relationship
+    MATCH (a:Author {author_id: relationship.authorId}), (af:Affiliation {affiliation_name: relationship.affiliation})
+    MERGE (a)-[:AFFILIATED_WITH]->(af)
+    RETURN count(a) AS createdRelationships
+    """
+    result = tx.run(query, relationships=relationships)
+    created_relationships = result.single()["createdRelationships"]
+    print(f"{created_relationships} AFFILIATED_WITH relationships created successfully")
+
+
+def create_affiliation(tx, affiliations):
+    query = """
+    UNWIND $affiliations AS affiliation
+    MERGE (af:Affiliation {affiliation_name: affiliation.name})
+    SET af.type = affiliation.type, af.address = affiliation.address, af.email = affiliation.email, af.phone_number = affiliation.phone_number, af.website = affiliation.website
+    RETURN count(af) AS createdAffiliations
+    """
+    result = tx.run(query, affiliations=affiliations)
+    created_affiliations = result.single()["createdAffiliations"]
+    print(f"{created_affiliations} affiliation nodes created successfully")
+
+def create_reviewed_by(tx, relationships):
+    query = """
+    UNWIND $relationships AS relationship
+    MATCH (r:Review {review_id: relationship.review_id}), (a:Author {author_id: relationship.author_id})
+    MERGE (a)-[:REVIEWED_BY]->(r)
+    RETURN count(a) AS createdRelationships
+    """
+    result = tx.run(query, relationships=relationships)
+    created_relationships = result.single()["createdRelationships"]
+    print(f"{created_relationships} REVIEWED_BY relationships created successfully")
+
+def create_reviews(tx, reviews):
+    query = """
+    UNWIND $reviews AS review
+    MERGE (r:Review {review_id: review.review_id})
+    SET r.decision = review.decision, r.date = toDate(review.date), r.abstract = review.abstract
+    RETURN count(r) AS createdReviews
+    """
+    result = tx.run(query, reviews=reviews)
+    created_reviews = result.single()["createdReviews"]
+    print(f"{created_reviews} review nodes created successfully")
+
+def create_cited_by(tx, relationships):
+    query = """
+    UNWIND $relationships AS relationship
+    MATCH (p1:Paper {paper_id: relationship.paperId}), (p2:Paper {paper_id: relationship.referenceId})
+    MERGE (p1)-[:CITED_BY]->(p2)
+    RETURN count(p1) AS createdRelationships
+    """
+    result = tx.run(query, relationships=relationships)
+    created_relationships = result.single()["createdRelationships"]
+    print(f"{created_relationships} CITED_BY relationships created successfully")
+    
 def delete_node(node,tx):
     query = f"""
     MATCH (n:{node})
@@ -109,7 +167,7 @@ def delete_all_entities(tx):
 
 path = "/home/furkanbk/SDM/P1/SDM-P1-GRAPH/data"
 
-print("[1]- Insert [2]- Delete [3]- Delete Everything [4]- Create A1 Model")
+print("[1]- Insert [2]- Delete [3]- Delete Everything [4]- Create A2 Model")
 operation = input("Enter the number of operation: ")
 
 
@@ -178,20 +236,41 @@ with GraphDatabase.driver(URI, auth=AUTH) as driver:
             with session.begin_transaction() as tx:
                 try:
                     #create all nodes
-                    df= pd.read_csv(os.path.join(path, "authors.csv"))
-                    create_authors(tx, df.to_dict('records'))
                     df= pd.read_csv(os.path.join(path, "papers_details.csv"))
                     create_papers(tx, df.to_dict('records'))
+                    
+                    df= pd.read_csv(os.path.join(path, "authors.csv"))
+                    create_authors(tx, df.to_dict('records'))
+
                     df= pd.read_csv(os.path.join(path, "conferences.csv"))
                     create_conferences(tx, df.to_dict('records'))
+
                     df= pd.read_csv(os.path.join(path, "journals.csv"))
                     create_journals(tx, df.to_dict('records'))
+
                     df= pd.read_csv(os.path.join(path, "written_by.csv"))
                     create_written_by(tx, df.to_dict('records'))
+
                     df= pd.read_csv(os.path.join(path, "published_in.csv"))
                     create_published_in(tx, df.to_dict('records'))
+
+                    df= pd.read_csv(os.path.join(path, "affiliations.csv"))
+                    create_affiliation(tx, df.to_dict('records'))
+
+                    df= pd.read_csv(os.path.join(path, "affiliated_with.csv"))
+                    create_affiliated_with(tx, df.to_dict('records'))
+
+                    df= pd.read_csv(os.path.join(path, "reviews.csv"))
+                    create_reviews(tx, df.to_dict('records'))
+
+                    df= pd.read_csv(os.path.join(path, "reviewed_by.csv"))
+                    create_reviewed_by(tx, df.to_dict('records'))
+
+                    df= pd.read_csv(os.path.join(path, "cited_by.csv"))
+                    create_cited_by(tx, df.to_dict('records'))
+
                     tx.commit()
-                    print("A1 Graph database created successfully")
+                    print("A2 Graph database created successfully")
                 except Exception as e:
                     # If there's any error, roll back the transaction
                     print("Error occurred:", e)

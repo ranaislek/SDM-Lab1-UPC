@@ -4,7 +4,7 @@ import time
 #read json file
 raw_paper_data = None
 path = "/home/furkanbk/SDM/P1/SDM-P1-GRAPH/data" # change the absolute path of data to your own path
-with open(path + '/matched_papers_on_field_Machine Learning.json', 'r') as json_file:
+with open(path + '/matched_papers_on_topics.json', 'r') as json_file:
     raw_paper_data = json.load(json_file)
 
 #extract paperId from raw_paper_data
@@ -34,15 +34,18 @@ def get_author_data(paper_id):
     paper_main_author_params = {'fields': 'name'}
     response = requests.get(authors_url, params=paper_main_author_params, headers=headers)
     #get all the authors
-    authors = response.json()['data']
-    print(authors)
+    authors = None
+    if response.status_code == 200:
+        
+        authors = response.json()['data']
+        print(authors)
 
     #create a dictionary pairs that maps paperId to authorId
+    if authors is not None:
+        for author in authors:
+            authorId = author['authorId']
 
-    for author in authors:
-        authorId = author['authorId']
-
-        author_details.append({'paperId': paper_id, 'authorId': authorId})
+            author_details.append({'paperId': paper_id, 'authorId': authorId})
 
 
    
@@ -57,6 +60,7 @@ import csv
 import pandas as pd
 df = pd.DataFrame(author_details)
 print(df.head())
-df.to_csv('written_by.csv', index=False)
+# Save the data to a CSV file
+df.to_csv(path + '/written_by.csv', index=False)
 print("done")
 

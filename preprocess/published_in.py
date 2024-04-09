@@ -1,10 +1,14 @@
 import json
 import requests
 import time
+from faker import Faker
+import uuid
 #read json file
+
+faker = Faker()
 raw_paper_data = None
 path = "/home/furkanbk/SDM/P1/SDM-P1-GRAPH/data" # change the absolute path of data to your own path
-with open(path + '/matched_papers_on_field_Machine Learning.json', 'r') as json_file:
+with open(path + '/matched_papers_on_topics.json', 'r') as json_file:
     raw_paper_data = json.load(json_file)
 
 #extract paperId from raw_paper_data
@@ -37,7 +41,7 @@ def get_paper_data(paper_id):
 
         if(venue is None):
             print(f"Venue is None for paper ID: {paper_id}")
-        
+
             return None
         if("type" not in venue):
             print(f"Type is not in venue for paper ID: {paper_id}")
@@ -86,9 +90,8 @@ df_conference_venues = pd.DataFrame(conference_venues)
 #print(df_journal_venues.head())
 #print(df_conference_venues.head())
 
+path = "/home/furkanbk/SDM/P1/SDM-P1-GRAPH/data" # change the absolute path of data to your own path
 #convert them to csv files
-df_conference_venues.to_csv('conferences.csv', index=False)
-df_journal_venues.to_csv('journals.csv', index=False)
-df_published_in.to_csv('published_in.csv', index=False)
-
-
+df_conference_venues.to_csv(path + '/conferences.csv', index=False)
+df_journal_venues.to_csv(path + '/journals.csv', index=False)
+df_published_in.to_csv(path + '/published_in.csv', index=False)

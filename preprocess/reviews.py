@@ -10,7 +10,7 @@ import pandas as pd
 path = "/home/furkanbk/SDM/P1/SDM-P1-GRAPH/data" # change the absolute path of data to your own path
 
 raw_paper_data = None
-with open(path + '/matched_papers_on_field_Machine Learning.json', 'r') as json_file:   
+with open(path + '/matched_papers_on_topics.json', 'r') as json_file:   
     raw_paper_data = json.load(json_file)
 
 #extract paperId from raw_paper_data
