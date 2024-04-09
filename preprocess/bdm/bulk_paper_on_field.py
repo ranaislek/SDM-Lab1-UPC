@@ -35,7 +35,7 @@ def fetch_all_results_on_topic(query_params,amount = 1000):
 
     #create query parameters for each subject in each fields
  
-    fields = ['Machine Learning', 'Game Development', 'Database Management']
+    fields = ['Machine Learning', 'Game', 'Database']
     all_results = []
     for field in fields:
 
@@ -44,13 +44,13 @@ def fetch_all_results_on_topic(query_params,amount = 1000):
             
 
             if (papers_in_field >= amount):
-                filename = f"matched_papers_{field}.json"
+               # filename = f"matched_papers_{field}.json"
                 # Write the data to the JSON file
                 #path is in bdm_data folder
-                path = "/home/furkanbk/SDM/P1/data"
-                with open(f"{path}/{filename}", 'w') as json_file:
-                    json.dump(all_results, json_file, indent=2)
-                all_results = []
+                # path = "/home/furkanbk/SDM/P1/data"
+                # with open(f"{path}/{filename}", 'w') as json_file:
+                #     json.dump(all_results, json_file, indent=2)
+                # all_results = []
                 break
             response = search_papers(query_params)
             if 'data' not in response:
@@ -62,6 +62,7 @@ def fetch_all_results_on_topic(query_params,amount = 1000):
                     if(papers_in_field >= amount):
                         break
                     all_results.append({'paperId': result['paperId'], 'title': result['title']})
+                    print("field {} papers_in_field {}".format(field, papers_in_field))
             # all_results.extend(response['data'])
             if 'token' not in response:
                 break
@@ -74,16 +75,15 @@ def fetch_all_results_on_topic(query_params,amount = 1000):
     return all_results
 
 
-all_result = fetch_all_results_on_topic(query_params, 100)
+all_results = fetch_all_results_on_topic(query_params, 100)
 
-#export the results to a json file
-path = "/home/furkanbk/SDM/P1/data"
-filename = "matched_papers.json"
+
+path = "//wsl.localhost/Ubuntu/home/furkanbk/SDM/P1/SDM-P1-GRAPH/data"
+#dump the results to a json file
+filename = f"matched_papers_on_topics.json"
 # Write the data to the JSON file
 with open(f"{path}/{filename}", 'w') as json_file:
-        json.dump(all_result, json_file, indent=2)
-
-
+    json.dump(all_results, json_file, indent=2)
 
 
 

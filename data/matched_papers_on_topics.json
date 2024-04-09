@@ -1,0 +1,722 @@
+[
+  {
+    "paperId": "00040bdd447f041a50ae95fd51926cf435ef1eba",
+    "title": "Early Detection of Aphid Infestation and Insect-Plant Interaction Assessment in Wheat Using a Low-Cost Electronic Nose (E-Nose), Near-Infrared Spectroscopy and Machine Learning Modeling"
+  },
+  {
+    "paperId": "0007cd4870abff3c79537a4722d2f6365eb5468f",
+    "title": "Computational Trust Models and Machine Learning"
+  },
+  {
+    "paperId": "0009c4975fcb502a4af0e53d46ec6255c13216a1",
+    "title": "Combining Machine Learning with Knowledge Engineering to detect Fake News in Social Networks - A Survey"
+  },
+  {
+    "paperId": "000bc721cefe3f2ba2425e8b95b042dc1e9778f9",
+    "title": "Applying Machine Learning Techniques to Improve Linux Process Scheduling"
+  },
+  {
+    "paperId": "000cd7ac3435007cca292fc8f1bac86b7a066467",
+    "title": "Forecasting Stock Market Prices Using Machine Learning and Deep Learning Models: A Systematic Review, Performance Analysis and Discussion of Implications"
+  },
+  {
+    "paperId": "0014e3f6909edbbf8e4d417baf2b991ffbc2909e",
+    "title": "Machine Learning for Predicting Cognitive Diseases: Methods, Data Sources and Risk Factors"
+  },
+  {
+    "paperId": "001533bcbe30802b9a37d8f9f22a083ccef516b4",
+    "title": "Photorealistic Monocular Gaze Redirection Using Machine Learning"
+  },
+  {
+    "paperId": "0018e888e83bfd993bc49455a8787577ab28a19c",
+    "title": "Evolving Applications of Artificial Intelligence and Machine Learning in Infectious Diseases Testing"
+  },
+  {
+    "paperId": "001c15accd39827ecf9838d496b7e44e9f890ee7",
+    "title": "miRLocator: Machine Learning-Based Prediction of Mature MicroRNAs within Plant Pre-miRNA Sequences"
+  },
+  {
+    "paperId": "001ca235cae845677c82167c21cbfa9eabddbfbc",
+    "title": "Classification of Children\u2019s Sitting Postures Using Machine Learning Algorithms"
+  },
+  {
+    "paperId": "001fed0e97d344c3aa563c704356099a05111949",
+    "title": "Season-Based Occupancy Prediction in Residential Buildings Using Machine Learning Models"
+  },
+  {
+    "paperId": "00296433175f54b52d49cb21f57ab608afe2d1bf",
+    "title": "Greedy and Linear Ensembles of Machine Learning Methods Outperform Single Approaches for QSPR Regression Problems"
+  },
+  {
+    "paperId": "002b5b830c6c7f312dd82cf936b6204bd4018de6",
+    "title": "Machine Learning-Based Classification of Human Behaviors and Falls in Restroom via Dual Doppler Radar Measurements"
+  },
+  {
+    "paperId": "002ca9eeb8de246f430f8c5ea4b60c5b3165aeac",
+    "title": "Methods for Forecasting Nonlinear Non-stationary Processes in Machine Learning"
+  },
+  {
+    "paperId": "00016e315b39d20b69f041790573e2215f9eb028",
+    "title": "Enhance Student Learning with PowerPoint Games: Using Twenty Questions to Promote Active Learning in Managerial Accounting"
+  },
+  {
+    "paperId": "0004bfb2afc73e755c6c4987225907472da966d1",
+    "title": "O-Minimal Hybrid Reachability Games"
+  },
+  {
+    "paperId": "000bf014a71283e739b3288783e0572dd4de7301",
+    "title": "Serious Games in Surgical Medical Education: A Virtual Emergency Department as a Tool for Teaching Clinical Reasoning to Medical Students"
+  },
+  {
+    "paperId": "0013693bccf244dad3d321558ac7986bc0230db9",
+    "title": "Emergent Conventions in Evolutionary Games"
+  },
+  {
+    "paperId": "001842ba6c880608a573eeeb2ccd38e9a8ba8281",
+    "title": "ffi cient Controller Synthesis for Consumption Games with Multiple Resource Types"
+  },
+  {
+    "paperId": "00196a9ef3e29d16a026e6fa69886e273c685cac",
+    "title": "Teaching Responsible Conduct of Research Through an Interactive Storytelling Game"
+  },
+  {
+    "paperId": "0019b23a39d2268d967292b158b9e723d7c5eb58",
+    "title": "The Maxmin of Recursive Games with Incomplete Information on one Side"
+  },
+  {
+    "paperId": "0019dbffc27ecda6e699a2a6a5d0861a478dd204",
+    "title": "Computing Nash Equilibria of Action-Graph Games via Support Enumeration"
+  },
+  {
+    "paperId": "001bd1d8b04d5c20d9f4f4860146d43de445bc17",
+    "title": "The Influence of Social Value Orientation on Information Processing in repeated Voluntary Contribution Mechanism (VCM) Games: An Eye-tracking Analysis"
+  },
+  {
+    "paperId": "002050388cdb39d6413ce48230496e8ccc08df04",
+    "title": "A Game-Theoretic Analysis of the Off-Switch Game"
+  },
+  {
+    "paperId": "00227f73b6547b43d9f6c22e0136ab1fadb7036c",
+    "title": "The Game of Triangles"
+  },
+  {
+    "paperId": "00240aaeb57dba9886d1a695176c97a17ad97885",
+    "title": "Stopping Games - Recent Results"
+  },
+  {
+    "paperId": "002523ab48c0a79567a275c5ba219e95e37d9cca",
+    "title": "Game Play: What Does It Mean for Pedagogy to Think Like a Game Developer?"
+  },
+  {
+    "paperId": "002c19bc5e0040b8bb4dd0d7fcbd1760abbb8035",
+    "title": "iShare: Blockchain-Based Privacy-Aware Multi-Agent Information Sharing Games for Cybersecurity"
+  },
+  {
+    "paperId": "002df72c36a270cc824897f6e5f88edf70fb1f61",
+    "title": "Linear-Quadratic Mean Field Stackelberg Games with State and Control Delays"
+  },
+  {
+    "paperId": "00314c680192fdf5e711e0d23c1f6d44cc89e65b",
+    "title": "The Impact of Monitoring in Infinitely Repeated Games: Perfect, Public, and Private"
+  },
+  {
+    "paperId": "0034365ccb6a98eddd0fab3184c1930621ca7b17",
+    "title": "This Uprising of Mine: Game Conventions, Cultural Memory and Civilian Experience of War in Polish Games"
+  },
+  {
+    "paperId": "00363213c1d91a7d051c5ccbd360e11c8210aae4",
+    "title": "Computer-Generated Music for Tabletop Role-Playing Games"
+  },
+  {
+    "paperId": "0038c3c38fd975d3373d63e76b7db5d2c7bf94bf",
+    "title": "AudioInSpace: Exploring the Creative Fusion of Generative Audio, Visuals and Gameplay"
+  },
+  {
+    "paperId": "0039e77f1a6de8f375b9c57417201957471ea121",
+    "title": "Player Goal Recognition in Open-World Digital Games with Long Short-Term Memory Networks"
+  },
+  {
+    "paperId": "003a4314596654c9524e7e40cb75bf1991c6837a",
+    "title": "Fundamental Tradeoffs and Constrained Coalitional Games in Autonomic Wireless Networks"
+  },
+  {
+    "paperId": "003b39f11d9a742f3ed581fccfdaa189b6f30171",
+    "title": "Game Design Patterns for Collaborative Player Interactions"
+  },
+  {
+    "paperId": "003d8ba6b56262942c5ed88052fbd1282495966b",
+    "title": "Immersive Multiplayer Games With Tangible and Physical Interaction"
+  },
+  {
+    "paperId": "003d912198ad1a718a84e430d47f6c513bb4df92",
+    "title": "Game-theoretic cooperativity in networks of self-interested units"
+  },
+  {
+    "paperId": "0042b16cba12db67855b603c261199b70067c69a",
+    "title": "A Game-Theoretic Framework for Optimum Decision Fusion in the Presence of Byzantines"
+  },
+  {
+    "paperId": "00433ea2a6d853403019b8b165030bacde9f20d3",
+    "title": "Waiting for Something to Happen: Narratives, Interactivity and Agency and the Video Game Cut-scene"
+  },
+  {
+    "paperId": "0048334fea7c1d80dd9f2fde8da71775a13afce6",
+    "title": "Using Online Computer Games in the ELT Classroom: A Case Study"
+  },
+  {
+    "paperId": "005073ef6077877fedb41002cb9273f1b08b7b09",
+    "title": "A Cooperative Game Framework for QoS Guided Job Allocation Schemes in Grids"
+  },
+  {
+    "paperId": "0054351123d266e99f6b207082265caa038b6b50",
+    "title": "Computer Game Use and Television Viewing Increased Risk for Overweight among Low Activity Girls: Fourth Thai National Health Examination Survey 2008-2009"
+  },
+  {
+    "paperId": "0055ac14fb41047107186e9174b2369e89f126b9",
+    "title": "Non-Cooperative Multicast and Facility Location Games"
+  },
+  {
+    "paperId": "0056e636953cb016836b2c05f43a3d1d4f19880b",
+    "title": "Teaching Engineering Ethics using BLOCKS Game"
+  },
+  {
+    "paperId": "0059adaaa42b647f4810d651fee0d7c5e5f60eaa",
+    "title": "Productive Gaming and the Case for Historiographic Game-Play"
+  },
+  {
+    "paperId": "005ad8621bb9672af1ac43500a5143d9d3f2db3e",
+    "title": "The Effectiveness of Games as Assignments in an Introductory Programming Course"
+  },
+  {
+    "paperId": "005b716759daadb580b472602f6167559aadc9c5",
+    "title": "Design Your Own Games and Activities: Thiagi's Templates for Performance Improvement"
+  },
+  {
+    "paperId": "00616d3f2033c39831e6274b000dba93e7173e8c",
+    "title": "Evolution of Games Towards The Discovery of Noble Uncertainty"
+  },
+  {
+    "paperId": "0061d50db46a06422fe3b7433918d9a39a79b74f",
+    "title": "Game-based Abstraction for Markov Decision Processes"
+  },
+  {
+    "paperId": "00656f8d0bef8ec30a14212dbea3f394a7112e94",
+    "title": "Game theory for cyber security"
+  },
+  {
+    "paperId": "006609032b88eb4feaa63d1465fde5611156ca86",
+    "title": "BCI Promises in Emotional Involvement in Music and Games"
+  },
+  {
+    "paperId": "00672bec9dd0e755f9c375f912c0f1c3918a6b74",
+    "title": "MarioQA: Answering Questions by Watching Gameplay Videos"
+  },
+  {
+    "paperId": "0069995f0be8f64d081b5c0bdd56d17f49ea5f25",
+    "title": "Cybersickness Among Gamers: An Online Survey"
+  },
+  {
+    "paperId": "007617660cc0d33741a6b6603da6a1844714cbdf",
+    "title": "A Computer Games Software Factory and Edutainment Platform for Microsoft .NET"
+  },
+  {
+    "paperId": "00768f59dc45c197f4329a4d6287423dca22cdbf",
+    "title": "STREETS: Game-Theoretic Traffic Patrolling with Exploration and Exploitation"
+  },
+  {
+    "paperId": "007b0a33a13c085f7ba0a66d1b6b1f7fbace740e",
+    "title": "Multi-Pursuer Multi-Evader Pursuit-Evasion Games with Jamming Confrontation"
+  },
+  {
+    "paperId": "007b5590510ea92dddb5c43ea4df9c8bc068e15d",
+    "title": "Transformations and Remembrances in the Digital Game We Sing for Healing"
+  },
+  {
+    "paperId": "007f1a6d948cfc4cd838131ab18fac51b01f5275",
+    "title": "Is This a Game or a Learning Moment"
+  },
+  {
+    "paperId": "00801b7f0a13c5959773466b1ba9e5b18ea7c7d5",
+    "title": "Understanding Interpersonal Function in Psychiatric Illness Through Multiplayer Economic Games"
+  },
+  {
+    "paperId": "00814de5c4a22fec6d7e6d161f006d9c59482278",
+    "title": "Security Metrics Based on Attack Graphs for the Olympic Games Scenario"
+  },
+  {
+    "paperId": "0082dd304daa17951de672ecfbc17175da4c320e",
+    "title": "From Parity and Payoff Games to Linear Programming"
+  },
+  {
+    "paperId": "0085bc8aa185ebb0fb18f55cc197c8d98232445d",
+    "title": "Evaluating Appropriateness Of System Responses In A Spoken CALL Game"
+  },
+  {
+    "paperId": "0088aea75b76d7ecd3fa9680ebe778e271c4efcb",
+    "title": "Strategy Grafting in Extensive Games"
+  },
+  {
+    "paperId": "008a06b6d99f30957947c2b0acf8f043db23fd75",
+    "title": "Game creativity analysis using neural networks"
+  },
+  {
+    "paperId": "008a0971b86645137102eebd63f8901638bf983c",
+    "title": "Game Theory Based Optimization of Security Configuration"
+  },
+  {
+    "paperId": "008eb1704c39eeee3efc8db2db53f24d74743e06",
+    "title": "Price-Based Resource Allocation for Spectrum-Sharing Femtocell Networks: A Stackelberg Game Approach"
+  },
+  {
+    "paperId": "008f1cca4c576b11d42c9a4cba236c834e451523",
+    "title": "Numerical Solutions for Stochastic Differential Games With Regime Switching"
+  },
+  {
+    "paperId": "008f2f675f9bf99f29ef7d3e8cdf4734cd9bb918",
+    "title": "Terrain Reasoning for 3 D Action Games"
+  },
+  {
+    "paperId": "008f51c5a995cf3d19bdcf2c7bb01648774daafb",
+    "title": "Bendtroller:: An Exploration of In-Game Action Mappings with a Deformable Game Controller"
+  },
+  {
+    "paperId": "008f8eb8cfbada33bedbcf794e725606b5a3a3e7",
+    "title": "Comparison of Individualized Computer Game Reinforcement versus Peer-interactive Board Game Reinforcement on Retention of Nutrition Label Knowledge"
+  },
+  {
+    "paperId": "0090fe788feb3d56ee9bb1aaf83d51de71d8d3e6",
+    "title": "Mobile Game-Based Science Learning"
+  },
+  {
+    "paperId": "0092c1083e4fb679b288686d1dc8c9d83efef9bc",
+    "title": "Bounds on the Price of stability of Undirected Network Design Games with Three Players"
+  },
+  {
+    "paperId": "009687779428dcb8c32f3c930697a7c3f8de3d3b",
+    "title": "The Open and the Closed: Games of Emergence and Games of Progression"
+  },
+  {
+    "paperId": "0098b6f1bf31b12cdd0c24ef81050c3d2a39b0f5",
+    "title": "On Game-Theoretic Network Security Provisioning"
+  },
+  {
+    "paperId": "009b13bb48af9d33dbeb961f044133c7c21cec89",
+    "title": "Collaborate and Share: An Experimental Study of the Effects of Task and Reward Interdependencies in Online Games"
+  },
+  {
+    "paperId": "00a3e1c293f3c8dfc205f0094f4d971850a5d99c",
+    "title": "Mancala Games -- Topics in Artificial Intelligence and Mathematics"
+  },
+  {
+    "paperId": "00a653b045e7df3e93de9dc3cb0a186024ad1df0",
+    "title": "Zero-Sum Repeated Games: Recent Advances and\u00a0New\u00a0Links with Differential Games"
+  },
+  {
+    "paperId": "00a9af382e2e28bdd25dddbb1cd64c1885a4fc93",
+    "title": "The Epistemic Logic of IF Games"
+  },
+  {
+    "paperId": "00b0779034bc13da8f4eb18ed3d0c3466d759b91",
+    "title": "A Survey of Game Theoretic Approaches to Modelling Decision-Making in Information Warfare Scenarios"
+  },
+  {
+    "paperId": "00b5f8d132c6223e130622b4136e1090e943f238",
+    "title": "A Model for the Evaluation of Educational Games for Teaching Software Engineering"
+  },
+  {
+    "paperId": "00b6456d504cf5d782803091b9a2d460daa7da80",
+    "title": "Analyzing the Factors that Influence Learning Experience through Game Based Learning using Visual Novel Game for Learning Pancasila"
+  },
+  {
+    "paperId": "00b6e7863d9ea0c81b2d5f61d019c32fc3456bc6",
+    "title": "\"It's Like I Would Die as Well\": Gratifications of Fearful Game Experience"
+  },
+  {
+    "paperId": "00b9b9bf5b07d6af71bef29c48a35b948cc12255",
+    "title": "Immersive Multi-user Decision Training Games with ARLearn"
+  },
+  {
+    "paperId": "00ba98cf43f53a8e9e61b8895a7ca302900e6d7e",
+    "title": "Predicting Student Self-regulation Strategies in Game-Based Learning Environments"
+  },
+  {
+    "paperId": "00bb7f29057d30892f84cc01a96301b688fcdef8",
+    "title": "Design and Computer Simulated User Scenarios: Exploring Real-Time 3D Game Engines and Simulation in the Maritime Sector"
+  },
+  {
+    "paperId": "00bc00b24b901559bb1cad66c4bf354808b1d923",
+    "title": "Resisting Collusion by Game in Culture Web"
+  },
+  {
+    "paperId": "00c05c5f00a88ca00e8704c2ce2010ac0667a924",
+    "title": "Learning Games as a Platform for Simulated Science Practice"
+  },
+  {
+    "paperId": "00c28df4baa4eea232026dafe8bf8cd800a9110a",
+    "title": "Simulation Games and Learning"
+  },
+  {
+    "paperId": "00c39a8b3857f16fd59ebd91ed13d68a1aed4d8b",
+    "title": "Scalable Neural Networks for Board Games"
+  },
+  {
+    "paperId": "00c5cf4399df8efa1179915c36088a99eb26f281",
+    "title": "Ludoliteracy: Defining, Understanding, and Supporting Games Education"
+  },
+  {
+    "paperId": "00c723c32a69c2a326d55c618694d5d1038da688",
+    "title": "Affective Design Patterns in Computer Games. Scrollrunner Case Study"
+  },
+  {
+    "paperId": "00c92bd26958dbc085eb4bbc72aa3d34f92e32c7",
+    "title": "Model Checking in Multiplayer Games Development"
+  },
+  {
+    "paperId": "00cdd54e6cc5cb616df26a32d8e709b67de52739",
+    "title": "Communities of Play: Emergent Cultures in Multiplayer Games and Virtual Worlds"
+  },
+  {
+    "paperId": "00d669ea812b93429bb59d00e3cbedee42d4efb1",
+    "title": "10 Key Principles for Designing Video Games for Foreign Language Learning"
+  },
+  {
+    "paperId": "00dc5c4cb64d6bd66ba091b2bdbd7baa189a3ced",
+    "title": "Applying Game Design Elements in the Workplace"
+  },
+  {
+    "paperId": "00e2b0f9bcdfa52fbf68a959f9daa8a5ba23bba8",
+    "title": "A First Course on Zero-Sum Repeated Games by Sylvain Sorin"
+  },
+  {
+    "paperId": "00e3c0110f4d65897ec9e805a4429f4aa03cc6fe",
+    "title": "On the Robustness of the Extension of the One-Third Law of Evolution to the Multi-Player Game"
+  },
+  {
+    "paperId": "00e3e4cfdba66226403368edd30df8032c9802f0",
+    "title": "Measuring the Size of Large No-Limit Poker Games"
+  },
+  {
+    "paperId": "00e422bdc76b82514d66675dcac8da0493352a8e",
+    "title": "Mean-Field-Type Games with Jump and Regime Switching"
+  },
+  {
+    "paperId": "00e70c97afd1af0b70e1fc6480d05a9d55a75413",
+    "title": "A Shapley Value Representation of Potential Games"
+  },
+  {
+    "paperId": "00e7411e4c52e499e01bde5072eb07940d162ad7",
+    "title": "Eye Gaze Assistance for a Game-Like Interactive Task"
+  },
+  {
+    "paperId": "0000d36f99f61d6768e7c21c46ce4350b41a6a89",
+    "title": "Signature File Methods for Indexing Object-Oriented Database Systems"
+  },
+  {
+    "paperId": "0006b5336a56fa671de83fddc17d7165e1a0d637",
+    "title": "Advanced Techniques for Content-Based Management of Multimedia Databases"
+  },
+  {
+    "paperId": "000f945179e9ffc0ad20fe695bcc992066d6d072",
+    "title": "An Introduction to Relational Database Theory"
+  },
+  {
+    "paperId": "00192a8dd9dd623047210e2bd23c87734cf65fe1",
+    "title": "Selected papers from the International Workshop on The World Wide Web and Databases"
+  },
+  {
+    "paperId": "0022282d20f3c507fba576062c6c58c02dd4c8f7",
+    "title": "2005 Special Issue: Beyond emotion archetypes: Databases for emotion modelling using neural networks"
+  },
+  {
+    "paperId": "00250fc7fe665bdb5af3e895a18d1c94db3a7c8e",
+    "title": "Relational Database to RDF Mapping Patterns"
+  },
+  {
+    "paperId": "0027a5389929596cc4bd1d645104cd7d88588509",
+    "title": "Database technology in health care"
+  },
+  {
+    "paperId": "0034c34af6a12c058c8ef12136758c8ee4d2f945",
+    "title": "The Paradigm of Computing with Words in Intelligent Database Querying"
+  },
+  {
+    "paperId": "003d1994ad51db685cdb7f98063edb3a53816bb7",
+    "title": "Database aesthetics"
+  },
+  {
+    "paperId": "0047798ed5bbb87084440d31345ae318e1e3a1b4",
+    "title": "Predicting Cyber Risks through National Vulnerability Database"
+  },
+  {
+    "paperId": "00554b24a42a74ce45d041d3ace268d3fe3eb77a",
+    "title": "Capture Database through Symbolization, Recognition and Generation of Motion Patterns"
+  },
+  {
+    "paperId": "005783454d128bc45ab86000efc78d5676ece1b1",
+    "title": "Demand Interprocedural Program Analysis Using Logic Databases"
+  },
+  {
+    "paperId": "005f0f6d796e1856b373e2116bdbffa719d12fbd",
+    "title": "Database Forensic Investigation Based on Table Relationship Analysis Techniques"
+  },
+  {
+    "paperId": "006707fad29166a3426fbb654d842c6d9292a771",
+    "title": "Attention-LSTM-Attention Model for Speech Emotion Recognition and Analysis of IEMOCAP Database"
+  },
+  {
+    "paperId": "0067258937f69e4cc4371a924134189074be8d93",
+    "title": "Automated Ranking of Database Query Results"
+  },
+  {
+    "paperId": "006b89abc356c1c3bf2dfa35f47c0601c39dce38",
+    "title": "Automating Physical Database Design in a Parallel Database"
+  },
+  {
+    "paperId": "006bd41c4a52c64445afdbc67182715a476e09c8",
+    "title": "Querying Encrypted Graph Databases"
+  },
+  {
+    "paperId": "006bf046e6c27d882bae79688004c4c4f4781a0f",
+    "title": "Testing Spatial Data Deliverance in SQL and NoSQL Database Using NodeJS Fullstack Web App"
+  },
+  {
+    "paperId": "007098d098b83163f76d17b75fb47f2eec43fd2d",
+    "title": "Ontology searching and browsing at the Rat Genome Database"
+  },
+  {
+    "paperId": "00729e81a3c5d5ca1f7c57751cc6664da5450c76",
+    "title": "Coordination in CIM:Bringing Database Functionality to Application Systems"
+  },
+  {
+    "paperId": "00735bf6a1ad14a343650e7a4b6661eda04ddd60",
+    "title": "Tripartite ATP-Independent Periplasmic Transporters: Application of a Relational Database for Genome-Wide Analysis of Transporter Gene Frequency and Organization"
+  },
+  {
+    "paperId": "0074abb724b0cec51d8ff51b73f41452fa3b156f",
+    "title": "Databases and ontologies Advance Access publication March 7, 2013 PLncDB: plant long non-coding RNA database"
+  },
+  {
+    "paperId": "0075dfdbd25dce1fd545d2ece39476a3a6dee5da",
+    "title": "Experimenting with the Archive: STS-ers As Analysts and Co-constructors of Databases and Other Archival Forms"
+  },
+  {
+    "paperId": "007d907ebb6183bb1891828afc6a7c3eeef00c87",
+    "title": "The impact of AlphaFold Protein Structure Database on the fields of life sciences"
+  },
+  {
+    "paperId": "00811cc3b808295db2c7a184c2a8da1d66d17e23",
+    "title": "OntoDB: It Is Time to Embed Your Domain Ontology in Your Database"
+  },
+  {
+    "paperId": "0083bf90c49c5f48d52ce309c4ddc7f4f9782b15",
+    "title": "Transaction Models for Advanced Database Applications"
+  },
+  {
+    "paperId": "0091346f761e451761f48eadd304bd3fb8a4126e",
+    "title": "EEG Databases in Research and Clinical Practice: Current Status and Future Directions"
+  },
+  {
+    "paperId": "00922c3a783155b87425b085306b973664044dd4",
+    "title": "Creating a Business Process Diagram and Database Queries to Detect Billing Errors and Analyze Calling Patterns for Cell Phone Service"
+  },
+  {
+    "paperId": "00967c22396abfb895868323ab720c28b837b4be",
+    "title": "Database Management: Concepts, Design, and Practice"
+  },
+  {
+    "paperId": "00975a7f3bc8bfb0a694117c07ccb7324333014f",
+    "title": "Integrating Locking and Optimistic Concurrency Control in Distributed Database Systems"
+  },
+  {
+    "paperId": "009bce9910153fbd8729954c24c64cf7ee0f7c1b",
+    "title": "Intrapartum Fetal Heart Rate Classification: Cross-Database Evaluation"
+  },
+  {
+    "paperId": "009eb31338512d9ca6ffde4062f0443f94b61fd1",
+    "title": "A Classification and Comparison of Main Memory Database Recovery Techniques"
+  },
+  {
+    "paperId": "00a0914dcd260804109cc05aef17830c371a1f27",
+    "title": "A Tool for Storing OWL Using Database Technology"
+  },
+  {
+    "paperId": "00a427715f49105b001ba242ad0e36b570c6d5db",
+    "title": "Efficient 3D Database Screening for Novel HIV-1 IN Inhibitors"
+  },
+  {
+    "paperId": "00a475e5f179857ad0d2d139d65183109b8c7dc4",
+    "title": "Causality and Explanations in Databases"
+  },
+  {
+    "paperId": "00ad2477dc6e9223507654688f088ba35a29a653",
+    "title": "Using Business Rules within a Design Process of Active Databases"
+  },
+  {
+    "paperId": "00ada6a5c6607c63b7e060d040ddee120d5107ee",
+    "title": "Private Read Update Write (PRUW) with Storage Constrained Databases"
+  },
+  {
+    "paperId": "00b3fc061b3600b9508480022556c9a76494dba4",
+    "title": "Review on Emotion Recognition Databases"
+  },
+  {
+    "paperId": "00b42b3d8e4417399b06d547f4c46030f332c9be",
+    "title": "Database updates in logic programming"
+  },
+  {
+    "paperId": "00bc156bac2b39fab1689fe047b23c9f216d7f29",
+    "title": "Database resources of the National Center for Biotechnology Information: update"
+  },
+  {
+    "paperId": "00bcec142c7d49ba269f65ba1463e2e226fdf545",
+    "title": "Nearest Neighbor Search:: A Database Perspective"
+  },
+  {
+    "paperId": "00c2b76966cc18c09e865cf827fb4c7a3d294a6c",
+    "title": "View Integration in Conceptual Database Design : Problems, Approaches and Solutions"
+  },
+  {
+    "paperId": "00c53bf5f1a48b64ee809cad8acc933d43234b9c",
+    "title": "Polish Emotional Speech Database - Recording and Preliminary Validation"
+  },
+  {
+    "paperId": "00c563820989ba36393a889743a97bcedf47dcd2",
+    "title": "Database Encryption - How to Balance Security with Performance"
+  },
+  {
+    "paperId": "00c9c8a970574dd80617c4d63493567d45f87888",
+    "title": "Querying Relational Databases with RDQL"
+  },
+  {
+    "paperId": "00cb8781b1c991659b9ba6e525eaadf13fe8f359",
+    "title": "Educational Applications of a Networked Communal Database"
+  },
+  {
+    "paperId": "00d3c2608f64f432f21a7749b9c674c94170d17e",
+    "title": "Mining Type Schemes in Databases"
+  },
+  {
+    "paperId": "00d751c11cf2390626d051bcbda4a70cb9355a38",
+    "title": "Visualization and Virtual Screening of the Chemical Universe Database GDB-17"
+  },
+  {
+    "paperId": "00d76f20f303c6829e23a4a9bfb9af4af3871c0c",
+    "title": "Communitywide Database Designs for Tracking Innovation Impact: Comets, Stars and Nanobank"
+  },
+  {
+    "paperId": "00ddb10417f77b54ea9ba38c35dcc3310a08aa34",
+    "title": "Optimization of Detected Deadlock Views of Distributed Database"
+  },
+  {
+    "paperId": "00e26133551f152f4c8913c5442238d30a63ef79",
+    "title": "Natural language Interface for Database: A Brief review"
+  },
+  {
+    "paperId": "00e346f93fe1eda00ce990a13a8ea8ba66bfc37b",
+    "title": "An Animated Introduction to Relational Databases for Many Majors"
+  },
+  {
+    "paperId": "00e34b7351b6f7104218a7a09ee22aedcc927d4b",
+    "title": "Manipulating Spatial Data in Constraint Databases"
+  },
+  {
+    "paperId": "00e65d86d2b4600508d3f76a940da7a36cee04a9",
+    "title": "Designing and Recording an Emotional Speech Database for Corpus Based Synthesis in Basque"
+  },
+  {
+    "paperId": "00f189133a8c64e5d197ef37092257463f8a2e8b",
+    "title": "A Strategy for Database Interoperation"
+  },
+  {
+    "paperId": "00f2dc9cd83b6730ff3c458b73d6c5507dcc36e4",
+    "title": "An Indexing and Retrieval Mechanism for Complex Similarity Queries in Image Databases"
+  },
+  {
+    "paperId": "00fcd279bc6e702cfa72bf98c381242b25fd1734",
+    "title": "Collection and Exploration of Large Data Monitoring Sets Using Bitmap Databases"
+  },
+  {
+    "paperId": "00fe7c7b31a1a83fbb38f605631f1d6e76f388a2",
+    "title": "Design-by-Analogy: Exploring for Analogical Inspiration With Behavior, Material, and Component-Based Structural Representation of Patent Databases"
+  },
+  {
+    "paperId": "0101bef3602965eb124803564e37141cff2333ea",
+    "title": "The PIR-International Protein Sequence Database."
+  },
+  {
+    "paperId": "011341dc87edea1fdc9aafe7020e8896fb9672b8",
+    "title": "A UIMA Database Interface for Managing NLP-related Text Annotations"
+  },
+  {
+    "paperId": "01135d952acc731742fd20b9b2d4915c4c169950",
+    "title": "The Burkholderia Genome Database: facilitating flexible queries and comparative analyses"
+  },
+  {
+    "paperId": "01139f79fb260e1bd06f423cb21522b3e41b31e9",
+    "title": "Potential of Graph Databases in Representing and Enriching Standardized Geodata"
+  },
+  {
+    "paperId": "01195a0ceb2ca420405c96ebcabc7718c1e78ac8",
+    "title": "Database of Piano Chords - An Engineering View of Harmony"
+  },
+  {
+    "paperId": "011961296d458fbf1d605e58f49497e7a8f6f011",
+    "title": "Subjective Quality Assessment for Wireless Image Communication : The Wireless Imaging Quality Database"
+  },
+  {
+    "paperId": "011efa271f4a51f73312e407d84161b7819ab066",
+    "title": "Approximations in Database Systems"
+  },
+  {
+    "paperId": "0125abc6b5f4b4e1c9b87c4735fc8313c0600c88",
+    "title": "A Comprehensive Guide Through the Italian Database Research Over the Last 25 Years"
+  },
+  {
+    "paperId": "0131f82eadbf40966b110360f97b99289e56dd37",
+    "title": "A Database of Vocal Tract Resonance Trajectories for Research in Speech Processing"
+  },
+  {
+    "paperId": "01322d3f7039eaed09ce4fa77dc4efb122e400a2",
+    "title": "CoDEL - A Relationally Complete Language for Database Evolution"
+  },
+  {
+    "paperId": "0134db5adf50c471906cbffa0d2f6a4fcbc0ae01",
+    "title": "Graph Databases in Molecular Biology"
+  },
+  {
+    "paperId": "01383cf064a9963054b5416c04cc421100656892",
+    "title": "Parallel Evaluation of Hierarchical Image Databases"
+  },
+  {
+    "paperId": "013fc96537baedea3e397d057be8404aa93d5299",
+    "title": "Cryptographic Protection of Databases and Software"
+  },
+  {
+    "paperId": "0140b503a44298915542b284f66ecd8e5adc737b",
+    "title": "A Practical Guide to Using Glycomics Databases"
+  },
+  {
+    "paperId": "01458da3d3902e6ccd4b8af92cd22553596da923",
+    "title": "Performance Evaluation of IoT Data Management Using MongoDB Versus MySQL Databases in Different Cloud Environments"
+  },
+  {
+    "paperId": "0149c0f5b7985d17afc516d932dd17c4205fd4ba",
+    "title": "Database Migration from Structured Database to non-Structured Database"
+  },
+  {
+    "paperId": "014cf690afedcb7d8fddaa9d6770f162385ffc99",
+    "title": "Databases in Grid Applications: Locality and Distribution"
+  },
+  {
+    "paperId": "0150286dd10c0e18fd86a08603fd32343ba73d46",
+    "title": "A Concurrent Database Manipulation Problem: Binary Search Trees (Abstract)"
+  },
+  {
+    "paperId": "0151ab779171add3177b5eacc5b42fed8d924e26",
+    "title": "High-Performance Computing on Heterogeneous Systems: Database Queries on CPU and GPU"
+  },
+  {
+    "paperId": "0152f2ba5f4765a313e4e41f735a37fca52a2a59",
+    "title": "An XML-Based Database for Knowledge Discovery"
+  }
+]

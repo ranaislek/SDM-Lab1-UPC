@@ -7,10 +7,12 @@ import re
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.probability import FreqDist
+from faker import Faker
 #read json file
+faker = Faker()
 raw_paper_data = None
 path = "/home/furkanbk/SDM/P1/SDM-P1-GRAPH/data" # change the absolute path of data to your own path
-with open(path + '/matched_papers_on_field_Machine Learning.json', 'r') as json_file:
+with open(path + '/matched_papers_on_topics.json', 'r') as json_file:
     raw_paper_data = json.load(json_file)
 
 #extract paperId from raw_paper_data
@@ -24,6 +26,8 @@ api_key = "1R3UkH1BdY6QtZr1wUUtw65hU2bWHe8T69Pq1VFT"
 headers = {'X-API-KEY': api_key}
 def nltk_keywords(abstract):
     # Tokenize the paragraph
+    if abstract is None:
+        return []
     tokens = word_tokenize(abstract.lower())
 
     # Remove stopwords
@@ -70,10 +74,18 @@ def get_paper_data(paper_id):
     #get the first author name
     #print(response.json())
     # print(response.json()['data'][0]['name'])
-    name = response.json()['data'][0]['name']
-    #create a mock email
-    email = response.json()['data'][0]['name'].replace(" ", "_") + "@gmail.com"
-    # print(email)
+    
+    name = faker.name()
+    email = faker.email()
+    
+    if response.status_code != 200:
+        if "data" in response.json().keys():
+            name = response.json()['data'][0]['name']
+            #create a mock email
+            email = response.json()['data'][0]['name'].replace(" ", "_") + "@gmail.com"
+    
+    
+        # print(email)
     #paper_data_query_params = {'fields': 'title,abstract,year,authors.authorId,embedding.specter_v2,venue,publicationVenue, journal'}
     paper_data_query_params = {'fields': 'title,abstract,year,embedding.specter_v2,externalIds'}
     #paper_data_query_params = {'fields': 'externalIds'}
@@ -117,6 +129,8 @@ import csv
 import pandas as pd
 df = pd.DataFrame(paper_details)
 print(df.head())
-df.to_csv('papers_details.csv', index=False)
+
+path = "/home/furkanbk/SDM/P1/SDM-P1-GRAPH/data" # change the absolute path of data to your own path
+df.to_csv(path + '/papers_details.csv', index=False)
 print("done")
 
