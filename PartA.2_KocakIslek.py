@@ -109,7 +109,7 @@ def delete_all_entities(tx):
 
 path = "/home/furkanbk/SDM/P1/SDM-P1-GRAPH/data"
 
-print("[1]- Insert [2]- Delete [3]- Delete Everything [4]- Create A1 Model")
+print("[1]- Insert [2]- Delete [3]- Delete Everything [4]- Create A2(Basic) Model")
 operation = input("Enter the number of operation: ")
 
 
@@ -191,7 +191,7 @@ with GraphDatabase.driver(URI, auth=AUTH) as driver:
                     df= pd.read_csv(os.path.join(path, "published_in.csv"))
                     create_published_in(tx, df.to_dict('records'))
                     tx.commit()
-                    print("A1 Graph database created successfully")
+                    print("A2(Basic) Graph database created successfully")
                 except Exception as e:
                     # If there's any error, roll back the transaction
                     print("Error occurred:", e)

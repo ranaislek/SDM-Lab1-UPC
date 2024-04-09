@@ -31,6 +31,7 @@ decisions = ["Accepted", "Rejected"]
 
 reviews = []
 reviewed_by = []
+review_on = []
 for paper in paper_ids:
 
     # GENERATE RANDOM REVIEWS
@@ -80,6 +81,15 @@ for paper in paper_ids:
             "review_id": review_id,
             "author_id": reviewer
         })
+
+  
+    #create csv for review_on
+    
+    review_on.append({
+       "review_id": review_id,
+       "paper_id": paper
+    })
+
         
 #create csv file for reviews
 df = pd.DataFrame(reviews)
@@ -88,5 +98,10 @@ df.to_csv(path + '/reviews.csv', index=False)
 #create csv file for reviewed_by
 df = pd.DataFrame(reviewed_by)
 df.to_csv(path + '/reviewed_by.csv', index=False)
+
+
+#create csv file for review_on
+df = pd.DataFrame(review_on)
+df.to_csv(path + '/review_on.csv', index=False)
 
 print("Reviews and reviewed_by csv files created successfully")

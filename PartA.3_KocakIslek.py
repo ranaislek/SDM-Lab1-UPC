@@ -131,12 +131,23 @@ def create_reviews(tx, reviews):
     query = """
     UNWIND $reviews AS review
     MERGE (r:Review {review_id: review.review_id})
-    SET r.decision = review.decision, r.date = toDate(review.date), r.abstract = review.abstract
+    SET r.decision = review.decision, r.date = datetime(review.date), r.abstract = review.abstract
     RETURN count(r) AS createdReviews
     """
     result = tx.run(query, reviews=reviews)
     created_reviews = result.single()["createdReviews"]
     print(f"{created_reviews} review nodes created successfully")
+
+def create_review_on(tx, relationships):
+    query = """
+    UNWIND $relationships AS relationship
+    MATCH (r:Review {review_id: relationship.review_id}), (p:Paper {paper_id: relationship.paper_id})
+    MERGE (r)-[:REVIEW_ON]->(p)
+    RETURN count(r) AS createdRelationships
+    """
+    result = tx.run(query, relationships=relationships)
+    created_relationships = result.single()["createdRelationships"]
+    print(f"{created_relationships} REVIEW_ON relationships created successfully")
 
 def create_cited_by(tx, relationships):
     query = """
@@ -167,152 +178,87 @@ def delete_all_entities(tx):
 
 path = "/home/furkanbk/SDM/P1/SDM-P1-GRAPH/data"
 
-print("[1]- Insert [2]- Delete [3]- Delete Everything [4]- Create A2 Model")
-operation = input("Enter the number of operation: ")
-
-
-
-
-
-csv_to_load = ""    
-entity = ""
-
-if operation != "3" and operation != "4":
-
-    print("Available Nodes: [1]- Author, [2]- Paper, [3]- Conference, [4]- Journal, [5]- Affiliation, [6]- Review")
-    print("Available Relationships: [7]- Written_by, [8]- Published_in, [9]- Affiliated_with, [10]- Reviewed_by, [11]- Cited_by")
-    #ask user what csv file to load
-    num = input("Enter the number of entity: ")
-    if num == "1":
-        csv_to_load = "authors.csv"
-        entity = "Author"
-    elif num == "2":
-        csv_to_load = "papers_details.csv"
-        entity = "Paper"
-    elif num == "3":
-        csv_to_load = "conferences.csv"
-        entity = "Conference"
-    elif num == "4":
-        csv_to_load = "journals.csv"
-        entity = "Journal"
-    elif num == "5":
-        csv_to_load = "written_by.csv"
-        entity = "WRITTEN_BY"
-    elif num == "6":
-        csv_to_load = "published_in.csv"
-        entity = "PUBLISHED_IN"
-
-
-csv_file_path = os.path.join(path, csv_to_load)
-
 with GraphDatabase.driver(URI, auth=AUTH) as driver:
     driver.verify_connectivity()
+    while True:
+        print("[1]- Delete Everything [2]- Create A3(Evolved) Model [3]- Exit")
+        operation = input("Enter the number of operation: ")
 
-    if operation == "2":
-        with driver.session() as session:
-            with session.begin_transaction() as tx:
-                try:
 
-                    delete_node(entity, tx)
-                    tx.commit()
-                    print("Nodes with label", entity, "deleted successfully")
-                except Exception as e:
-                    # If there's any error, roll back the transaction
-                    print("Error occurred:", e)
-                    tx.rollback()
-    elif operation == "3":
-        with driver.session() as session:
-            with session.begin_transaction() as tx:
-                try:
-                    delete_all_entities(tx)
-                    tx.commit()
-                    print("All nodes deleted successfully")
-                except Exception as e:
-                    # If there's any error, roll back the transaction
-                    print("Error occurred:", e)
-                    tx.rollback()
-    elif operation == "4":
-        with driver.session() as session:
-            with session.begin_transaction() as tx:
-                try:
-                    #create all nodes
-                    df= pd.read_csv(os.path.join(path, "papers_details.csv"))
-                    create_papers(tx, df.to_dict('records'))
-                    
-                    df= pd.read_csv(os.path.join(path, "authors.csv"))
-                    create_authors(tx, df.to_dict('records'))
 
-                    df= pd.read_csv(os.path.join(path, "conferences.csv"))
-                    create_conferences(tx, df.to_dict('records'))
 
-                    df= pd.read_csv(os.path.join(path, "journals.csv"))
-                    create_journals(tx, df.to_dict('records'))
 
-                    df= pd.read_csv(os.path.join(path, "written_by.csv"))
-                    create_written_by(tx, df.to_dict('records'))
+        csv_to_load = ""    
+        entity = ""
 
-                    df= pd.read_csv(os.path.join(path, "published_in.csv"))
-                    create_published_in(tx, df.to_dict('records'))
 
-                    df= pd.read_csv(os.path.join(path, "affiliations.csv"))
-                    create_affiliation(tx, df.to_dict('records'))
 
-                    df= pd.read_csv(os.path.join(path, "affiliated_with.csv"))
-                    create_affiliated_with(tx, df.to_dict('records'))
+        csv_file_path = os.path.join(path, csv_to_load)
 
-                    df= pd.read_csv(os.path.join(path, "reviews.csv"))
-                    create_reviews(tx, df.to_dict('records'))
-
-                    df= pd.read_csv(os.path.join(path, "reviewed_by.csv"))
-                    create_reviewed_by(tx, df.to_dict('records'))
-
-                    df= pd.read_csv(os.path.join(path, "cited_by.csv"))
-                    create_cited_by(tx, df.to_dict('records'))
-
-                    tx.commit()
-                    print("A2 Graph database created successfully")
-                except Exception as e:
-                    # If there's any error, roll back the transaction
-                    print("Error occurred:", e)
-                    tx.rollback()
         
-    else:
-        df= pd.read_csv(csv_file_path)
-        print(df.head())
-        #check if database is empty
-        with driver.session() as session:
-            with session.begin_transaction() as tx:
-                try:
-                    if num == "1":
-                        create_authors(tx, df.to_dict('records'))
+
+        if operation == "1":
+            with driver.session() as session:
+                with session.begin_transaction() as tx:
+                    try:
+                        delete_all_entities(tx)
                         tx.commit()
-                        print("Author nodes created successfully")
-                    if num == "2":
+                        print("*******All nodes are deleted successfully********")
+                    except Exception as e:
+                        # If there's any error, roll back the transaction
+                        print("Error occurred:", e)
+                        tx.rollback()
+        elif operation == "2":
+            with driver.session() as session:
+                with session.begin_transaction() as tx:
+                    try:
+                        #create all nodes
+                        df= pd.read_csv(os.path.join(path, "papers_details.csv"))
                         create_papers(tx, df.to_dict('records'))
-                        tx.commit()
-                        print("Paper nodes created successfully")
-                    if num == "3":
+                        
+                        df= pd.read_csv(os.path.join(path, "authors.csv"))
+                        create_authors(tx, df.to_dict('records'))
+
+                        df= pd.read_csv(os.path.join(path, "conferences.csv"))
                         create_conferences(tx, df.to_dict('records'))
-                        tx.commit()
-                        print("Conference nodes created successfully")
-                    if num == "4":
+
+                        df= pd.read_csv(os.path.join(path, "journals.csv"))
                         create_journals(tx, df.to_dict('records'))
-                        tx.commit()
-                        print("Journal nodes created successfully")
-                    if num == "5":
+
+                        df= pd.read_csv(os.path.join(path, "written_by.csv"))
                         create_written_by(tx, df.to_dict('records'))
-                        tx.commit()
-                        print("WRITTEN_BY relationships created successfully")
-                    if num == "6":
+
+                        df= pd.read_csv(os.path.join(path, "published_in.csv"))
                         create_published_in(tx, df.to_dict('records'))
-                        tx.commit()
-                        print("PUBLISHED_IN relationships created successfully")
+
+                        df= pd.read_csv(os.path.join(path, "affiliations.csv"))
+                        create_affiliation(tx, df.to_dict('records'))
+
+                        df= pd.read_csv(os.path.join(path, "affiliated_with.csv"))
+                        create_affiliated_with(tx, df.to_dict('records'))
+
+                        df= pd.read_csv(os.path.join(path, "reviews.csv"))
+                        create_reviews(tx, df.to_dict('records'))
+
+                        df= pd.read_csv(os.path.join(path, "reviewed_by.csv"))
+                        create_reviewed_by(tx, df.to_dict('records'))
+
+                        df = pd.read_csv(os.path.join(path, "review_on.csv"))
+                        create_review_on(tx, df.to_dict('records'))
 
                         
-                except Exception as e:
-                    # If there's any error, roll back the transaction
-                    print("Error occurred:", e)
-                    tx.rollback()
+                        df= pd.read_csv(os.path.join(path, "citations.csv"))
+                        create_cited_by(tx, df.to_dict('records'))
+
+
+                        tx.commit()
+                        print("*******A3(Evolved) Graph database created successfully******")
+                    except Exception as e:
+                        # If there's any error, roll back the transaction
+                        print("Error occurred:", e)
+                        tx.rollback()
+        elif operation == "3":
+            break
 
 
 
@@ -320,5 +266,5 @@ with GraphDatabase.driver(URI, auth=AUTH) as driver:
 
 
 
-# # Close Neo4j driver
-driver.close()
+    # # Close Neo4j driver
+    driver.close()
