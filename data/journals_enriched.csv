@@ -1,0 +1,43 @@
+ss_venue_id,name,url,year,volume
+1f660445-ef9f-4d26-82de-0c5bc32cb009,IEEE Journal on Selected Areas in Communications,http://www.comsoc.org/jsac/,2002,1
+cb66020e-b9e1-4ff6-a26f-02fca5b10d1d,IEEE Journal on Selected Areas in Communications,http://www.comsoc.org/jsac/,1994,2
+df9a8411-ebab-41ca-b55c-97580d0f3fc4,IEEE Journal on Selected Areas in Communications,http://www.comsoc.org/jsac/,1983,3
+a30f691d-e14d-4a6f-95dc-e65fd2f9ac65,Biological Psychiatry,http://www.elsevier.com/locate/biopsychiat,2008,1
+50c80a9e-0782-4ffc-8db5-94f3d9a99549,Biological Psychiatry,http://www.elsevier.com/locate/biopsychiat,1993,2
+6b5058f6-ac40-4f20-ba9f-667818bb37f4,Biological Psychiatry,http://www.elsevier.com/locate/biopsychiat,1997,3
+dc3c2d84-fadf-4ca7-b3ef-0f9c06963856,Biological Psychiatry,http://www.elsevier.com/locate/biopsychiat,2017,4
+8147d924-8423-42c1-9d28-d778ab13834b,IEEE Journal on Selected Areas in Communications,http://www.comsoc.org/jsac/,2009,1
+132eefc3-5d14-4ab6-87d9-f0f30ae7514c,IEEE Journal on Selected Areas in Communications,http://www.comsoc.org/jsac/,1975,2
+ba42b9cf-df98-459d-897d-3ba5d6c48427,IEEE Journal on Selected Areas in Communications,http://www.comsoc.org/jsac/,1976,3
+db20f82f-6b21-4d91-858e-128b71e3945f,IEEE Journal on Selected Areas in Communications,http://www.comsoc.org/jsac/,1989,4
+b2a6f1af-9599-477c-a763-65abb8c97f31,IEEE Journal on Selected Areas in Communications,http://www.comsoc.org/jsac/,2023,5
+23ea1e0e-8c12-4f86-b41e-324fa903199a,IEEE Journal on Selected Areas in Communications,http://www.comsoc.org/jsac/,2023,6
+13ffe49f-74b4-43e6-a5f5-760a19181c3a,IEEE Journal on Selected Areas in Communications,http://www.comsoc.org/jsac/,2013,7
+cd9269b9-26ab-4684-ae9f-3a31db85214e,Electronics,http://www.electronics.etfbl.net/,2001,1
+b3387394-4ff8-43ed-917c-baba408ab9ad,Electronics,http://www.electronics.etfbl.net/,1999,2
+d86f7ab5-522c-46d9-890d-5d69abdbe8a3,Electronics,http://www.electronics.etfbl.net/,2007,3
+1178f68a-3e54-43a1-b5ad-c2a95d82b014,Electronics,http://www.electronics.etfbl.net/,2021,4
+c3616762-7401-4b3b-8fa0-5415cbaac9cf,Clinical EEG and Neuroscience,http://www.ecnsweb.com/ce_clinicaleeg.htm,1971,1
+90ea2e0f-7dbd-469d-a32e-5426b7322a23,Clinical EEG and Neuroscience,http://www.ecnsweb.com/ce_clinicaleeg.htm,1989,2
+126bf663-a26b-48ec-8d60-d26f27ad904f,Clinical EEG and Neuroscience,http://www.ecnsweb.com/ce_clinicaleeg.htm,2016,3
+6acde606-c7cb-4718-8199-c42a7420cee4,Clinical EEG and Neuroscience,http://www.ecnsweb.com/ce_clinicaleeg.htm,1970,4
+90d82cfc-f575-45ed-b865-01e0a070688e,Clinical EEG and Neuroscience,http://www.ecnsweb.com/ce_clinicaleeg.htm,2009,5
+4916e530-9459-491f-9584-0a6fed6fad41,Clinical EEG and Neuroscience,http://www.ecnsweb.com/ce_clinicaleeg.htm,2016,6
+403ea468-8258-400f-b868-9bf8c36a6dd3,Journal of Chemical Information and Modeling,http://pubs.acs.org/jcim,1996,1
+2f1e9b1e-301c-49fc-b652-ae4ba96a0154,Journal of Chemical Information and Modeling,http://pubs.acs.org/jcim,2004,2
+9dcdbc79-cd22-45cb-bc63-72ad3524fc11,Journal of Chemical Information and Modeling,http://pubs.acs.org/jcim,2020,3
+90505781-1553-4a85-a2ed-bea6d5c00f6c,Proceedings of the VLDB Endowment,http://dl.acm.org/toc.cfm?id=J1174,2004,1
+8cb24734-bd43-4161-8a1f-f2bb653d0344,Proceedings of the VLDB Endowment,http://dl.acm.org/toc.cfm?id=J1174,2010,2
+98ca84f9-614f-48fc-9d6c-82fe2859649e,Proceedings of the VLDB Endowment,http://dl.acm.org/toc.cfm?id=J1174,2023,3
+2910c7f5-eba8-4e66-b06f-f94e81b7a114,Proceedings of the VLDB Endowment,http://dl.acm.org/toc.cfm?id=J1174,1990,4
+eac18b54-200e-42d9-b1ee-9c8ef8531be2,Proceedings of the VLDB Endowment,http://dl.acm.org/toc.cfm?id=J1174,1971,5
+14b229f0-5db0-45c8-8e38-464391cd9833,Proceedings of the VLDB Endowment,http://dl.acm.org/toc.cfm?id=J1174,2008,6
+c6e657e9-fe0f-4f20-9f99-5683b2117a95,Journal of Database Management,https://www.igi-global.com/journal/journal-database-management-jdm/1072,2021,1
+c52317c0-40d3-47ac-836f-44f7fb7d033c,Journal of Database Management,https://www.igi-global.com/journal/journal-database-management-jdm/1072,1998,2
+18a50785-8cfc-4865-98ee-855bccd19ccb,Journal of Database Management,https://www.igi-global.com/journal/journal-database-management-jdm/1072,2016,3
+0dd6c414-2780-4ede-9161-d3a9ef9d2d3b,Journal of Database Management,https://www.igi-global.com/journal/journal-database-management-jdm/1072,1986,4
+7e3c323a-a84f-4328-9821-7eea4e7f60db,Journal of Chemical Information and Modeling,http://pubs.acs.org/jcim,2008,1
+445a2d9a-00eb-415a-83e3-445d9be212d1,Journal of Chemical Information and Modeling,http://pubs.acs.org/jcim,2011,2
+e3aba18e-cadc-44a1-98ee-581b48d1a491,Journal of Chemical Information and Modeling,http://pubs.acs.org/jcim,2001,3
+d1ce4073-ce24-4c58-8801-f8c04ba59c43,Journal of Chemical Information and Modeling,http://pubs.acs.org/jcim,1999,4
+15ea3f11-3fbe-42a5-8f38-6c7d662f8694,Journal of Chemical Information and Modeling,http://pubs.acs.org/jcim,1983,5
