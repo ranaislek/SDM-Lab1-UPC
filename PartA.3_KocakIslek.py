@@ -216,7 +216,7 @@ with GraphDatabase.driver(URI, auth=AUTH) as driver:
                 with session.begin_transaction() as tx:
                     try:
                         #create all nodes
-                        df= pd.read_csv(os.path.join(path, "papers_details.csv"))
+                        df= pd.read_csv(os.path.join(path, "papers_details_enriched.csv"))
                         create_papers(tx, df.to_dict('records'))
                         
                         df= pd.read_csv(os.path.join(path, "authors.csv"))
@@ -228,10 +228,10 @@ with GraphDatabase.driver(URI, auth=AUTH) as driver:
                         df= pd.read_csv(os.path.join(path, "journals_enriched.csv"))
                         create_journals(tx, df.to_dict('records'))
 
-                        df= pd.read_csv(os.path.join(path, "written_by.csv"))
+                        df= pd.read_csv(os.path.join(path, "written_by_enriched.csv"))
                         create_written_by(tx, df.to_dict('records'))
 
-                        df= pd.read_csv(os.path.join(path, "published_in_enriched.csv"))
+                        df= pd.read_csv(os.path.join(path, "published_in_enriched_v2.csv"))
                         create_published_in(tx, df.to_dict('records'))
 
                         df= pd.read_csv(os.path.join(path, "affiliations.csv"))

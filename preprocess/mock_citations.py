@@ -19,14 +19,19 @@ paper_ids = [paper['paperId'] for paper in raw_paper_data]
 #create 10 mock citations for each paper in the paper_ids list to another paper in the paper_ids list
 reference_details = []
 for paper in paper_ids:
-    for i in range(50):
-        referenceId = random.choice(paper_ids)
-        if paper != referenceId:
-            #create fake year between 2017 and 2021
-            year = faker.date_time_between(start_date='-5y', end_date='now').year
-           
-            reference_details.append({'paperId': paper, 'referenceId': referenceId, 'year': year})
-        #paper cannot be a reference to itself
+    for i in range(1, 9):
+        paper_new = paper + "-" + str(i)
+
+        #create random number between 20 and 50
+        rand= random.randint(20, 50)
+        for i in range(rand):
+            referenceId = random.choice(paper_ids)
+            if paper_new != referenceId:
+                #create fake year between 2017 and 2021
+                year = faker.date_time_between(start_date='-5y', end_date='now').year
+            
+                reference_details.append({'paperId': paper_new, 'referenceId': referenceId, 'year': year})
+            #paper cannot be a reference to itself
 
 
 import csv
