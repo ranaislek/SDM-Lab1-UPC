@@ -81,10 +81,11 @@ def create_published_in(tx, relationships):
     MATCH (p:Paper {paper_id: relationship.paper_id}), 
             (v {ss_venue_id: relationship.ss_venue_id})
     WHERE (v:Conference) OR (v:Journal)
+    WITH p, v, toInteger(relationship.year) AS year
 
 
     // Create "published_in" relationship between papers and conferences/journals
-    MERGE (p)-[pi:PUBLISHED_IN {year: relationship.year} ]->(v)
+    MERGE (p)-[pi:PUBLISHED_IN {year: year} ]->(v)
     RETURN count(p) AS createdRelationships
 
     """
@@ -155,7 +156,7 @@ def create_cited_by(tx, relationships):
     query = """
     UNWIND $relationships AS relationship
     MATCH (p1:Paper {paper_id: relationship.paperId}), (p2:Paper {paper_id: relationship.referenceId})
-    MERGE (p1)-[r:CITED_BY {year: relationship.year}]->(p2)
+    MERGE (p1)-[r:CITED_BY {year: toInteger(relationship.year)}]->(p2)
     RETURN count(p1) AS createdRelationships
     """
     result = tx.run(query, relationships=relationships)
