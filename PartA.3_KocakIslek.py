@@ -84,7 +84,7 @@ def create_published_in(tx, relationships):
 
 
     // Create "published_in" relationship between papers and conferences/journals
-    MERGE (p)-[:PUBLISHED_IN]->(v)
+    MERGE (p)-[pi:PUBLISHED_IN {year: relationship.year} ]->(v)
     RETURN count(p) AS createdRelationships
 
     """
@@ -150,10 +150,12 @@ def create_review_on(tx, relationships):
     print(f"{created_relationships} REVIEW_ON relationships created successfully")
 
 def create_cited_by(tx, relationships):
+    #add year information to the relationship
+
     query = """
     UNWIND $relationships AS relationship
     MATCH (p1:Paper {paper_id: relationship.paperId}), (p2:Paper {paper_id: relationship.referenceId})
-    MERGE (p1)-[:CITED_BY]->(p2)
+    MERGE (p1)-[r:CITED_BY {year: relationship.year}]->(p2)
     RETURN count(p1) AS createdRelationships
     """
     result = tx.run(query, relationships=relationships)

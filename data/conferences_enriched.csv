@@ -1,32 +1,38 @@
 ss_venue_id,name,url,city,year,edition
-9a4f4824-8142-4a2c-9f17-610b3593c54e,International Joint Conference on Artificial Intelligence,http://www.ijcai.org/,Saraborough,1977,1
-f163b0aa-2dc9-4ab6-9d30-d0fad71d0fd9,International Joint Conference on Artificial Intelligence,http://www.ijcai.org/,Port Ronaldberg,1986,2
-828416ca-06bf-4084-a246-0edc642882bb,International Joint Conference on Artificial Intelligence,http://www.ijcai.org/,Pattersonland,1999,3
-921d96ae-72db-40bf-9039-4e51bc8f3e2a,IEEE International Conference on Computer Vision,https://ieeexplore.ieee.org/xpl/conhome/1000149/all-proceedings,Woodland,1999,1
-e8931405-e625-49b7-8d94-68dce6d5e06f,IEEE International Conference on Computer Vision,https://ieeexplore.ieee.org/xpl/conhome/1000149/all-proceedings,West Davidmouth,1993,2
-5f09bac7-3811-4feb-b742-374ba2756a11,IEEE International Conference on Computer Vision,https://ieeexplore.ieee.org/xpl/conhome/1000149/all-proceedings,Colemanmouth,1986,3
-f83e0f18-10d4-40a8-9071-d2eacdefb71f,IEEE International Conference on Computer Vision,https://ieeexplore.ieee.org/xpl/conhome/1000149/all-proceedings,New Matthew,2020,4
-45dd6061-5de9-486b-a7e7-a583aa5c5211,IEEE International Conference on Computer Vision,https://ieeexplore.ieee.org/xpl/conhome/1000149/all-proceedings,Velasquezberg,2007,5
-8a9d385b-f2ad-42e9-a337-8ba40ea4383c,IEEE International Conference on Computer Vision,https://ieeexplore.ieee.org/xpl/conhome/1000149/all-proceedings,Lake Erin,1976,6
-2ed562b5-2333-42a6-8829-1ed44166cae7,International Conference on Applied Human Factors and Ergonomics,https://2022.ahfe.org/,Morrisonbury,1983,1
-b8bf6325-9a68-487a-8e18-0e89cd2558df,International Conference on Applied Human Factors and Ergonomics,https://2022.ahfe.org/,East Steven,1991,2
-32880ce1-0575-4f3b-92ce-28e1ccc5428e,International Conference on Applied Human Factors and Ergonomics,https://2022.ahfe.org/,New Deborah,2015,3
-2e55506d-dff8-4997-b844-44b7c8b7dc63,International Conference on Applied Human Factors and Ergonomics,https://2022.ahfe.org/,Lake Samuelland,2003,4
-a18692ab-f447-48b4-acdb-a2e86d5ca738,AAAI Conference on Artificial Intelligence,http://www.aaai.org/,Lake Johntown,1976,1
-b1b973f3-79b7-4a66-87e5-f4b49c9a2c6e,AAAI Conference on Artificial Intelligence,http://www.aaai.org/,Port Bruce,1996,2
-470c8b4c-c9f1-4d99-935e-162ebbe1a060,AAAI Conference on Artificial Intelligence,http://www.aaai.org/,Davisfurt,2024,3
-cb62c4b1-7a1c-42fc-9e69-8a9c58cd36af,Neural Information Processing Systems,http://neurips.cc/,North Ryanberg,1995,1
-9909dd6c-e2cd-4def-853f-a00fc9946b43,Neural Information Processing Systems,http://neurips.cc/,Ricebury,1979,2
-ce3ee31e-069d-45ee-b401-3411af5ff357,Neural Information Processing Systems,http://neurips.cc/,East Anthony,1981,3
-bfa9da52-37f9-4fb6-bcc6-257a58e33252,Neural Information Processing Systems,http://neurips.cc/,Sarahville,2015,4
-7f86c286-c4e9-40fa-9fe2-9d8c62cb281f,Neural Information Processing Systems,http://neurips.cc/,Port Joseph,2013,5
-9d33a2d9-3383-4f80-ba9c-caff450b660d,Conference on Computer Science and Information Systems,https://fedcsis.org/,Lindabury,2017,1
-94802ae3-d092-4b68-b5f0-d781ce4b3e0d,Conference on Computer Science and Information Systems,https://fedcsis.org/,Valeriemouth,1984,2
-64cd70e2-63ca-431c-b13f-523b9da8c241,Conference on Computer Science and Information Systems,https://fedcsis.org/,North Dylan,2000,3
-0109db7c-ef6d-4c35-a31b-35c3aed86768,Conference on Computer Science and Information Systems,https://fedcsis.org/,Justinberg,1975,4
-60f76a21-8aa5-4b31-9df3-16a26e73f2a1,"International Multi-Conference on Systems, Signals & Devices",,Timothystad,2001,1
-4033b765-599f-4bc0-9e12-fa4404c77f5c,"International Multi-Conference on Systems, Signals & Devices",,Stephanieside,2006,2
-8c5be273-367c-4a4d-91da-3c333faa6986,"International Multi-Conference on Systems, Signals & Devices",,Holtborough,2017,3
-cf1cd9f0-b207-40df-a07f-800193da00c0,"International Multi-Conference on Systems, Signals & Devices",,South Donnafurt,2023,4
-06f64777-8b40-4bfc-b766-50d06471cad6,"International Multi-Conference on Systems, Signals & Devices",,Dennisbury,2019,5
-c11be494-d696-4006-9408-32a4e9dda098,"International Multi-Conference on Systems, Signals & Devices",,East Madeline,1989,6
+8cad2e42-bd6f-4708-9a0a-9f20fdcc63cd,International Conference on Data Stream Mining & Processing,,Chaneyborough,1973,1
+423f8580-5d72-44f0-a0a9-3151de4288c5,International Conference on Data Stream Mining & Processing,,East Christopherside,1995,2
+6643f7bf-c8af-48cd-b51a-c7247b85e148,International Conference on Data Stream Mining & Processing,,Edwardsview,2009,3
+22ec40a8-789e-409e-9d35-81ffe1f31951,AAAI Conference on Artificial Intelligence,http://www.aaai.org/,Cobbfort,1994,1
+b876c7b3-79b5-4397-8107-4235220ee738,AAAI Conference on Artificial Intelligence,http://www.aaai.org/,Jacksonland,2001,2
+74be5bfb-0aba-4866-bad1-118d24508bfb,AAAI Conference on Artificial Intelligence,http://www.aaai.org/,Lake Aprilburgh,1974,3
+cc334c7e-a268-4ab9-b442-75f7adff8272,AAAI Conference on Artificial Intelligence,http://www.aaai.org/,Jessicamouth,2016,4
+3935458d-d70a-4312-b2e5-8a2f2a2f71b9,AAAI Conference on Artificial Intelligence,http://www.aaai.org/,Port Chris,2014,5
+970dcaa4-94f3-4c3f-a6d6-f109f8c744d0,AAAI Conference on Artificial Intelligence,http://www.aaai.org/,New Miguel,1995,6
+72173f5c-c426-48b5-b91c-4c5d6fd23ec5,Brazilian Symposium on Software Engineering,,Melissahaven,1993,1
+5e156b61-a83d-4ffa-af98-69ae66107193,Brazilian Symposium on Software Engineering,,South Larryfurt,2008,2
+e6d0a95a-e3af-49bf-b9ff-423c0774dff7,Brazilian Symposium on Software Engineering,,South Dianechester,2004,3
+a683af4d-0cad-4b22-8fb8-b9c74f706cc5,Brazilian Symposium on Software Engineering,,Lake Jessicashire,2004,4
+8c66e22a-401f-49a5-89f6-7dc955423e40,Brazilian Symposium on Software Engineering,,Dunlapfurt,1980,5
+b124218f-e44e-4d21-bbf2-b6872492dca9,IEEE/ACM International Conference on Human-Robot Interaction,http://www.wikicfp.com/cfp/program?id=1232,North Craigport,2002,1
+e3433f10-fd70-490b-a309-5f3155762fe8,IEEE/ACM International Conference on Human-Robot Interaction,http://www.wikicfp.com/cfp/program?id=1232,Davidland,2015,2
+efeb0b98-ce57-4b46-a7ac-4f6fb7553eff,IEEE/ACM International Conference on Human-Robot Interaction,http://www.wikicfp.com/cfp/program?id=1232,East Amanda,1993,3
+f55ce1d0-fca1-40bb-8797-9a9b7dcbb7a7,IEEE/ACM International Conference on Human-Robot Interaction,http://www.wikicfp.com/cfp/program?id=1232,Port Jonathan,2006,4
+8eaff284-d387-4e65-8169-65d52dd5dca3,Berliner XML Tage,http://www.berliner-xmltage.de/,Cristinahaven,1974,1
+655bb64a-368a-430d-9e5c-118bb65468fa,Berliner XML Tage,http://www.berliner-xmltage.de/,Lake Ellenborough,2017,2
+2b6a57dc-2f56-44b2-ba5d-7433b0fd703f,Berliner XML Tage,http://www.berliner-xmltage.de/,Patelbury,2003,3
+7e7855c7-b1fe-47b8-9839-3f94eaf2f318,Berliner XML Tage,http://www.berliner-xmltage.de/,Port Johnville,2008,4
+18289c54-e5e3-42cf-b2b5-1acb7d14ff70,Berliner XML Tage,http://www.berliner-xmltage.de/,Combsland,1985,5
+83c581dc-24d3-4837-9f9d-45d0d0ef95d4,Berliner XML Tage,http://www.berliner-xmltage.de/,Ryanbury,2005,6
+d5704488-0ce4-46da-a358-0b9066c90fb9,Berliner XML Tage,http://www.berliner-xmltage.de/,Lake Sara,1977,7
+49620e5c-f80b-411d-8e7d-fbeed3f3f929,"International Multi-Conference on Systems, Signals & Devices",,Gatesport,1995,1
+5c54b1a0-c25e-4629-ae72-b55544fd12bc,"International Multi-Conference on Systems, Signals & Devices",,Vanceton,2022,2
+d9c8b485-4186-4bee-bb4f-b5c8858f5b11,"International Multi-Conference on Systems, Signals & Devices",,New Bryan,1987,3
+51edc56d-8ef7-4010-8980-b9343f1f0bf5,"International Multi-Conference on Systems, Signals & Devices",,Brandonfurt,2008,4
+f6a55640-b883-40c6-80d7-51eeca8de579,"International Multi-Conference on Systems, Signals & Devices",,Lake Tammy,2019,5
+fdbcae3a-52a5-492f-9416-bb6173a76916,"International Multi-Conference on Systems, Signals & Devices",,West Kristinatown,2017,6
+54fb424e-b137-40d6-8e70-983665b4b2e8,"International Multi-Conference on Systems, Signals & Devices",,Pricefurt,2014,7
+9b63d409-cfdb-4744-adfa-e78b83cf5869,International Conference on Database Theory,http://alpha.luc.ac.be/~lucp1080/icdt/,Danielsside,1995,1
+53f73d0b-aa4b-4495-94d3-bef7b1fc41ec,International Conference on Database Theory,http://alpha.luc.ac.be/~lucp1080/icdt/,East Amber,2006,2
+e87f9428-f9ad-48c1-bddf-3e4d063c6275,International Conference on Database Theory,http://alpha.luc.ac.be/~lucp1080/icdt/,Millerstad,2018,3
+94a0b73b-e56d-4fc4-a0da-c3764ad538e5,International Conference on Database Theory,http://alpha.luc.ac.be/~lucp1080/icdt/,Randyshire,2002,4
+3fa0fb57-fab0-48da-954b-e00fc65ce62a,International Conference on Database Theory,http://alpha.luc.ac.be/~lucp1080/icdt/,South Savannahmouth,2013,5
