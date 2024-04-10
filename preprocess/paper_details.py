@@ -1,136 +1,80 @@
 import json
 import requests
-import time
-import string
-import nltk
 import re
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.probability import FreqDist
 from faker import Faker
-#read json file
+import pandas as pd
+
+# Ensure you've downloaded the necessary NLTK data
+import nltk
+nltk.download('punkt')
+nltk.download('stopwords')
+
 faker = Faker()
-raw_paper_data = None
-path = "/home/furkanbk/SDM/P1/SDM-P1-GRAPH/data" # change the absolute path of data to your own path
-with open(path + '/matched_papers_on_topics.json', 'r') as json_file:
+
+# Update the path to where your JSON data is stored and where you want to save the CSV
+path = "/home/ranaislek/Desktop/SDM-P1-GRAPH/data"  # Adjust this to your actual data directory
+
+# Load raw paper data from a JSON file
+with open(f'{path}/matched_papers_on_topics.json', 'r') as json_file:
     raw_paper_data = json.load(json_file)
 
-#extract paperId from raw_paper_data
+# Extract paper IDs from the loaded JSON data
 paper_ids = [paper['paperId'] for paper in raw_paper_data]
 
-
-paper_search_url = 'https://api.semanticscholar.org/graph/v1/paper/search'
-api_key = "1R3UkH1BdY6QtZr1wUUtw65hU2bWHe8T69Pq1VFT"
-
-# Define headers with API key
+# Semantic Scholar API setup
+api_key = "q6oxPwzi1a4IL9ijR8XLX4yw9e4awxvF6It1DE7D"  # Replace with your actual API key
 headers = {'X-API-KEY': api_key}
+
 def nltk_keywords(abstract):
-    # Tokenize the paragraph
+    """Extract keywords from an abstract using NLTK."""
     if abstract is None:
-        return []
+        return ""
     tokens = word_tokenize(abstract.lower())
-
-    # Remove stopwords
     stop_words = set(stopwords.words('english'))
-    filtered_tokens = [token for token in tokens if token not in stop_words]
-
-    # Remove punctuation and ensure complete words
-    filtered_tokens = [re.sub(r'[^\w\s]', '', token) for token in filtered_tokens if re.sub(r'[^\w\s]', '', token)]
-
-    # Calculate frequency distribution
+    filtered_tokens = [token for token in tokens if token not in stop_words and token.isalpha()]
     freq_dist = FreqDist(filtered_tokens)
-
-    # Get the most common words as keywords
     keywords = freq_dist.most_common(20)
-
-    return [keyword[0] for keyword in keywords]
-def generate_keywords(title):
-    # Tokenize the title by splitting it into words
-    words = title.split()
-
-    # Remove punctuation and convert words to lowercase
-    keywords = [''.join(c for c in word if c not in string.punctuation).lower() for word in words]
-
-    #eliminate stopwords
-    stopwords = ["for", "and", "of", "in", "on", "the", "to", "a", "an", "is", "at", "by", "with", "from"]
-    keywords = [word for word in keywords if word not in stopwords]
-
-    return keywords
+    return ','.join([keyword[0] for keyword in keywords])
 
 def get_paper_data(paper_id):
-    url = 'https://api.semanticscholar.org/graph/v1/paper/' + paper_id
-    
-    # Define which details about the paper you would like to receive in the response
-    
-    authors_url = 'https://api.semanticscholar.org/graph/v1/paper/' + paper_id + '/authors'
-
-
-    
-
-    #find main author
-    #paper_data_query_params = {'fields': 'authors.authorId'}
+    """Fetch paper data from Semantic Scholar API and process keywords."""
+    url = f'https://api.semanticscholar.org/graph/v1/paper/{paper_id}'
+    authors_url = f'{url}/authors'
     paper_main_author_params = {'fields': 'name'}
-    response = requests.get(authors_url, params=paper_main_author_params, headers=headers)
-    #get the first author name
-    #print(response.json())
-    # print(response.json()['data'][0]['name'])
     
-    name = faker.name()
-    email = faker.email()
+    # Attempt to fetch main author data
+    response = requests.get(authors_url, headers=headers, params=paper_main_author_params)
+    name, email = faker.name(), faker.email()  # Default to fake data if real data is unavailable
     
-    if response.status_code != 200:
-        if "data" in response.json().keys():
-            name = response.json()['data'][0]['name']
-            #create a mock email
-            email = response.json()['data'][0]['name'].replace(" ", "_") + "@gmail.com"
+    if response.status_code == 200 and 'data' in response.json() and response.json()['data']:
+        # Ensure there's at least one author before attempting to access the list
+        name = response.json()['data'][0]['name']
+        email = name.replace(" ", "_") + "@example.com"
     
-    
-        # print(email)
-    #paper_data_query_params = {'fields': 'title,abstract,year,authors.authorId,embedding.specter_v2,venue,publicationVenue, journal'}
+    # Fetch the main paper data
     paper_data_query_params = {'fields': 'title,abstract,year,embedding.specter_v2,externalIds'}
-    #paper_data_query_params = {'fields': 'externalIds'}
+    response = requests.get(url, headers=headers, params=paper_data_query_params)
     
-    
-    #Send the API request and store the response in a variable
-    response = requests.get(url, params=paper_data_query_params, headers=headers)
-   
     if response.status_code == 200:
-        response = response.json()
-        
-        #keywords = generate_keywords(response['title'])
-        #response['keywords'] = keywords
-        response['MA_name'] = name
-        response['MA_email'] = email
-
-        keywords = nltk_keywords(response['abstract'])
-        #print(keywords)
-        response['keywords'] = keywords
-        doi = None
-        if 'DOI' in response['externalIds']:
-           doi = response['externalIds']['DOI']
-        response['doi'] = doi
-        return response
+        response_data = response.json()
+        response_data['MA_name'] = name
+        response_data['MA_email'] = email
+        response_data['keywords'] = nltk_keywords(response_data.get('abstract', ''))
+        response_data['doi'] = response_data.get('externalIds', {}).get('DOI', None)
+        return response_data
     else:
-        print(response.status_code)
+        print(f"Failed to fetch data for paper ID: {paper_id}")
         return None
-   
-# Fetch paper details for each paper_id
-paper_details = []
-for paper_id in paper_ids:
-    paper_data = get_paper_data(paper_id)
     
-    if paper_data is not None:
-        paper_details.append(paper_data)
-    else:
-        print(f"Failed to retrieve paper details for paper ID: {paper_id}")
-    #time.sleep(0.5)  # Add a short delay to avoid hitting rate limits
-#convert this list of dictionaries to a csv file
-import csv
-import pandas as pd
-df = pd.DataFrame(paper_details)
-print(df.head())
+# Process each paper ID to fetch and prepare paper details
+paper_details_temp = [get_paper_data(pid) for pid in paper_ids]
+# Filter out None values after collecting responses
+paper_details = [pd for pd in paper_details_temp if pd]
 
-path = "/home/furkanbk/SDM/P1/SDM-P1-GRAPH/data" # change the absolute path of data to your own path
-df.to_csv(path + '/papers_details.csv', index=False)
-print("done")
-
+# Convert the list of paper details into a DataFrame and save as a CSV file
+df = pd.DataFrame([pd for pd in paper_details if pd])  # Filter out any None values
+df.to_csv(f'{path}/papers_details.csv', index=False)
+print("CSV file saved.")
