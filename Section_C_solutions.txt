@@ -1,0 +1,100 @@
+C Recommender:
+
+In this task we create a simple recommender. Specifically, we want to create a reviewer
+recommender for editors and chairs. In this exercise we will identify potential reviewers for
+the database community.
+Guidelines. Notice that this is a process to be performed in several steps (several queries).
+Importantly, you must assert (i.e., extend the graph to include) the information extracted
+from each step:
+
+Query to check graph:
+
+to check the overall nodes:
+MATCH (n)
+RETURN n
+LIMIT 100
+
+to check keywords:
+MATCH (p:Paper)
+RETURN p.keywords, p.title
+LIMIT 10
+
+
+- The first thing to do is to find/define the research communities. A community is
+defined by a set of keywords. Assume that the database community is defined through
+the following keywords: data management, indexing, data modeling, big data, data
+processing, data storage and data querying.
+
+Query:
+MATCH (p:Paper)
+WHERE p.keywords IS NOT NULL AND ANY(keyword IN split(toString(p.keywords), ",") WHERE toLower(keyword) IN ['data', 'management', 'indexing', 'modeling', 'big data', 'processing', 'storage', 'querying'])
+SET p:DatabaseCommunity
+RETURN p
+LIMIT 25
+
+- Next, we need to find the conferences and journals related to the database community
+(i.e., are specific to the field of databases). Assume that if 90% of the papers published
+in a conference/journal contain one of the keywords of the database community we
+consider that conference/journal as related to that community.
+
+Query:
+MATCH (p:DatabaseCommunity)-[:PUBLISHED_IN]->(v)
+WITH v, COUNT(p) AS PapersCount
+SET v:RelatedToDatabaseCommunity
+RETURN v, PapersCount
+LIMIT 25
+
+
+- Next, we want to identify the top papers of these conferences/journals. We need to
+find the papers with the highest number of citations from papers of the same community (papers in the conferences/journals of the database community). As a result we
+would obtain (highlight), say, the top-100 papers of the conferences of the database
+community.
+
+Query:
+MATCH (p:DatabaseCommunity)-[:CITED_BY]->(cited:Paper)
+WITH p, COUNT(cited) AS citations
+ORDER BY citations DESC
+LIMIT 100
+SET p:TopPaper
+
+To visualize/check them:
+MATCH (p:DatabaseCommunity)-[:PUBLISHED_IN]->(v)
+RETURN p, v
+LIMIT 25
+
+- Finally, an author of any of these top-100 papers is automatically considered a potential
+good match to review database papers. In addition, we want to identify gurus, i.e.,
+reputable authors that would be able to review for top conferences. We identify gurus
+as those authors that are authors of, at least, two papers among the top-100 identified.
+
+Query:
+MATCH (a:Author)-[:WRITTEN_BY]->(p:TopPaper)
+WITH a
+SET a:PotentialReviewer
+RETURN a.name AS AuthorName
+LIMIT 25
+
+(no gurus in our dataset)
+MATCH (a:Author)-[:WRITTEN_BY]->(p:TopPaper)
+WITH a, COUNT(p) AS TopPapers
+WHERE TopPapers >= 2
+SET a:Guru
+RETURN a.name AS GuruName, TopPapers
+LIMIT 25
+
+Visualization:
+MATCH (a:Author)-[:WRITTEN_BY]->(p:TopPaper)
+WHERE a:PotentialReviewer
+RETURN a, p
+LIMIT 25
+
+MATCH (a:Guru)-[:WRITTEN_BY]->(p)
+RETURN a, collect(p.title) AS Papers
+LIMIT 25
+
+
+Tasks
+1. For each stage (including the last one), provide a Cypher statement finding the relevant
+data of each step and asserting the inferred knowledge into the graph.
+Note: The required queries must be included in the lab document under section C and in
+your program.
