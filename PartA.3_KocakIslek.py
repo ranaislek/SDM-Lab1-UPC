@@ -81,10 +81,11 @@ def create_published_in(tx, relationships):
     MATCH (p:Paper {paper_id: relationship.paper_id}), 
             (v {ss_venue_id: relationship.ss_venue_id})
     WHERE (v:Conference) OR (v:Journal)
+    WITH p, v, toInteger(relationship.year) AS year
 
 
     // Create "published_in" relationship between papers and conferences/journals
-    MERGE (p)-[:PUBLISHED_IN]->(v)
+    MERGE (p)-[pi:PUBLISHED_IN {year: year} ]->(v)
     RETURN count(p) AS createdRelationships
 
     """
@@ -150,10 +151,12 @@ def create_review_on(tx, relationships):
     print(f"{created_relationships} REVIEW_ON relationships created successfully")
 
 def create_cited_by(tx, relationships):
+    #add year information to the relationship
+
     query = """
     UNWIND $relationships AS relationship
     MATCH (p1:Paper {paper_id: relationship.paperId}), (p2:Paper {paper_id: relationship.referenceId})
-    MERGE (p1)-[:CITED_BY]->(p2)
+    MERGE (p1)-[r:CITED_BY {year: toInteger(relationship.year)}]->(p2)
     RETURN count(p1) AS createdRelationships
     """
     result = tx.run(query, relationships=relationships)
@@ -213,7 +216,7 @@ with GraphDatabase.driver(URI, auth=AUTH) as driver:
                 with session.begin_transaction() as tx:
                     try:
                         #create all nodes
-                        df= pd.read_csv(os.path.join(path, "papers_details.csv"))
+                        df= pd.read_csv(os.path.join(path, "papers_details_enriched.csv"))
                         create_papers(tx, df.to_dict('records'))
                         
                         df= pd.read_csv(os.path.join(path, "authors.csv"))
@@ -225,10 +228,10 @@ with GraphDatabase.driver(URI, auth=AUTH) as driver:
                         df= pd.read_csv(os.path.join(path, "journals_enriched.csv"))
                         create_journals(tx, df.to_dict('records'))
 
-                        df= pd.read_csv(os.path.join(path, "written_by.csv"))
+                        df= pd.read_csv(os.path.join(path, "written_by_enriched.csv"))
                         create_written_by(tx, df.to_dict('records'))
 
-                        df= pd.read_csv(os.path.join(path, "published_in_enriched.csv"))
+                        df= pd.read_csv(os.path.join(path, "published_in_enriched_v2.csv"))
                         create_published_in(tx, df.to_dict('records'))
 
                         df= pd.read_csv(os.path.join(path, "affiliations.csv"))

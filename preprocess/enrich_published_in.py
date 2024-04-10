@@ -122,10 +122,15 @@ for index, row in papers.iterrows():
             
             ss_venue_id = conference_with_edition['ss_venue_id'].values[0]
             print(ss_venue_id)
+
+            #create a random publish year between 2017 and 2023
+            year = faker.date_time_between(start_date='-5y', end_date='now').year
             
+            paperId = paper_id + "-" + str(i)
             published_in.append({
                 "paper_id": paper_id,
-                "ss_venue_id": ss_venue_id
+                "ss_venue_id": ss_venue_id,
+                "year": year
             })
 
 
@@ -143,14 +148,17 @@ for index, row in papers.iterrows():
                 break
           
             ss_venue_id = journal_with_edition['ss_venue_id'].values[0]
-            
+            year = faker.date_time_between(start_date='-5y', end_date='now').year
+            paperId = paper_id + "-" + str(i)
             published_in.append({
                 "paper_id": paper_id,
-                "ss_venue_id": ss_venue_id
+                "ss_venue_id": ss_venue_id,
+                "year" : year
             })
 
 df = pd.DataFrame(published_in)
-df.to_csv(path + '/published_in_enriched.csv', index=False)
+#df.to_csv(path + '/published_in_enriched.csv', index=False)
+df.to_csv(path + '/published_in_enriched_v2.csv', index=False)
 print(df.head())
    
 
