@@ -236,10 +236,5 @@ with GraphDatabase.driver(URI, auth=AUTH) as driver:
                     tx.rollback()
 
 
-
-
-
-
-
 # # Close Neo4j driver
 driver.close()
