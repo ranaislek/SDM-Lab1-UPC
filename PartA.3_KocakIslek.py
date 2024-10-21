@@ -263,11 +263,5 @@ with GraphDatabase.driver(URI, auth=AUTH) as driver:
         elif operation == "3":
             break
 
-
-
-
-
-
-
     # # Close Neo4j driver
     driver.close()
