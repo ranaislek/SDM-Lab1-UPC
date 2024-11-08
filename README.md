@@ -1,4 +1,4 @@
 # SDM-P1-GRAPH
 Project-1 of Semantic Data Management class of BDMA
 
-Please dont forget to change credentials to your own neo4j database as well as change absolute paths in python files if you are trying to recreate csv files through preprocess scripts.
+Please don't forget to change credentials to your own Neo4j database as well as change absolute paths in Python files if you are trying to recreate CSV files through preprocess scripts.
